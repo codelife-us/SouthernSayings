@@ -10,8 +10,14 @@ Southern Sayings is a command-line program that displays a curated collection of
 
 To compile the program, use the provided build task:
 
+
+For Mac
 ```bash
 clang++ -std=c++20 -stdlib=libc++ -fcolor-diagnostics -fansi-escape-codes -g southernsayings.cpp -o southernsayings
+```
+For Linux
+```bash
+g++ -std=c++20 southernsayings.cpp -o southernsayings
 ```
 
 ## Usage
