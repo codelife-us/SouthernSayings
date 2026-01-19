@@ -1,0 +1,15 @@
+# If you do not have the GCC Compiler, you can install it with some commands:
+# this was tested on WSL for Ubuntu 24.04
+
+sudo apt update -y
+sudo apt install build-essential
+
+# verify it is installed
+gcc --version
+
+# Download the southernsayings.cpp, perhaps to $HOME from this repository
+g++ -std=c++20 southernsayings.cpp -o southernsayings
+
+# you will then be able to execute the southernsayings file 
+# example, if you are in the same current directory, then use ./southernsayings 
+# use command line paramter or --help or -h to see the options available
