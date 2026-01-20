@@ -31,6 +31,7 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 - `-1, --one` - Display a single random saying
 - `-s, --separate` - Separate lines format: saying on one line, meaning on the next, then a blank line (useful for readable output)
 - `-c, --color` - Colored output: pink for saying, orange for meaning
+- `-nm, --nomeaning` - Display only the saying without the meaning
 - `-h, --help` - Display this help message
 - *(none)* - Display all sayings in shuffled order
 
