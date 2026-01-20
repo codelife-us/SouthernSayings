@@ -208,7 +208,7 @@ const vector<Saying> southernSayings = {
     {"Jumpy as a frog on a hot skillet", "Try to learn to stay calm under pressure."},
     {"She's like a hen trying to crow.", "Stay true to who you are, not who others want you to be."},
     {"If it ain't broke, don't fix it.", "Sometimes, simplicity is best."},
-    {"Diggin' a hold deeper than a gopher on double time", "Know when to stopp making things worse."},
+    {"Diggin' a hole deeper than a gopher on double time", "Know when to stop making things worse. (also faster than a and in springtime)"},
     {"He's got more excuses than a dog has fleas.", "Own your mistakes and don't try to justify them."},
     {"He's as stubborn as a mule in a mud pit.", "Flexibility is key to success."},
     {"She's holdin' on tighter than a tick on a hound.", "Know when to let go of things that no longer server you."},
