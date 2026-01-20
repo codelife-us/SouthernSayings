@@ -27,12 +27,13 @@
 // Description: A collection of Southern sayings with their meanings.
 //
 // Command Line Options:
-//   -1, --one       Display a single random saying
-//   -s, --separate  Separate lines format: saying on one line, meaning on the next,
-//                   then a blank line (useful for readable output)
-//   -c, --color     Colored output: pink for saying, orange for meaning
-//   -h, --help      Display this help message
-//   (none)          Display all sayings in shuffled order
+//   -1, --one        Display a single random saying
+//   -s, --separate   Separate lines format: saying on one line, meaning on the next,
+//                    then a blank line (useful for readable output)
+//   -c, --color      Colored output: pink for saying, orange for meaning
+//   -nm, --nomeaning Display only the saying without the meaning
+//   -h, --help       Display this help message
+//   (none)           Display all sayings in shuffled order
 
 #include <array>
 #include <string>
@@ -262,13 +263,23 @@ const vector<Saying> southernSayings = {
     {"Christmas Eve gift!", "This is usually said on the morning of Dec. 24, with the goal of being the first person to say it. In some families, saying it can even result in receiving an extra gift, and may be a hug."}
 };
 
-void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false) {
+void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
     // ANSI color codes
     const string pinkColor = "\033[35m";      // Pink/Magenta
     const string orangeColor = "\033[33m";   // Orange/Yellow
     const string resetColor = "\033[0m";     // Reset to default
     
-    if (colored) {
+    if (noMeaning) {
+        // Only display the saying
+        if (colored) {
+            std::cout << pinkColor << saying.text << resetColor << "\n";
+        } else {
+            std::cout << saying.text << "\n";
+        }
+        if (separateLines) {
+            std::cout << "\n";
+        }
+    } else if (colored) {
         if (separateLines) {
             std::cout << pinkColor << saying.text << resetColor << "\n"
                       << orangeColor << saying.meaning << resetColor << "\n\n";
@@ -289,17 +300,19 @@ void displayHelp() {
     std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
     std::cout << "Usage: ./southernsayings [OPTIONS]\n\n";
     std::cout << "Options:\n";
-    std::cout << "  -1, --one       Display a single random saying\n";
-    std::cout << "  -s, --separate  Separate lines format: saying on one line, meaning on the next,\n";
-    std::cout << "                  then a blank line (useful for readable output)\n";
-    std::cout << "  -c, --color     Colored output: pink for saying, orange for meaning\n";
-    std::cout << "  -h, --help      Display this help message\n";
-    std::cout << "  (none)          Display all sayings in shuffled order\n\n";
+    std::cout << "  -1, --one        Display a single random saying\n";
+    std::cout << "  -s, --separate   Separate lines format: saying on one line, meaning on the next,\n";
+    std::cout << "                   then a blank line (useful for readable output)\n";
+    std::cout << "  -c, --color      Colored output: pink for saying, orange for meaning\n";
+    std::cout << "  -nm, --nomeaning Display only the saying without the meaning\n";
+    std::cout << "  -h, --help       Display this help message\n";
+    std::cout << "  (none)           Display all sayings in shuffled order\n\n";
     std::cout << "Examples:\n";
     std::cout << "  ./southernsayings                  - Display all sayings shuffled\n";
     std::cout << "  ./southernsayings -1               - Display one random saying\n";
     std::cout << "  ./southernsayings --color --separate - Display all sayings with colors and separate lines\n";
     std::cout << "  ./southernsayings --one --color    - Display one random saying in color\n";
+    std::cout << "  ./southernsayings -nm              - Display all sayings without meanings\n";
 }
 
 int main(int argc, char* argv[]) {
@@ -307,6 +320,7 @@ int main(int argc, char* argv[]) {
     bool separateLines = false;
     bool randomSingle = false;
     bool colored = false;
+    bool noMeaning = false;
     
     for (int i = 1; i < argc; i++) {
         if (string(argv[i]) == "-s" || string(argv[i]) == "--separate") {
@@ -315,6 +329,8 @@ int main(int argc, char* argv[]) {
             randomSingle = true;
         } else if (string(argv[i]) == "-c" || string(argv[i]) == "--color") {
             colored = true;
+        } else if (string(argv[i]) == "-nm" || string(argv[i]) == "--nomeaning") {
+            noMeaning = true;
         } else if (string(argv[i]) == "-h" || string(argv[i]) == "--help") {
             displayHelp();
             return 0;
@@ -328,7 +344,7 @@ int main(int argc, char* argv[]) {
         uniform_int_distribution<> dis(0, southernSayings.size() - 1);
         
         const auto& saying = southernSayings[dis(gen)];
-        outputSaying(saying, separateLines, colored);
+        outputSaying(saying, separateLines, colored, noMeaning);
     } else {
         // Display all sayings (shuffled)
         std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n";
@@ -341,7 +357,7 @@ int main(int argc, char* argv[]) {
         
         for (const auto& saying : sayingsCopy) {
             // Print each saying and its meaning
-            outputSaying(saying, separateLines, colored);
+            outputSaying(saying, separateLines, colored, noMeaning);
         }
         
         std::cout << "\nTotal sayings: " << southernSayings.size() << "\n";
