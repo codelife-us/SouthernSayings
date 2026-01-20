@@ -50,6 +50,9 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 # Display one random saying in color
 ./southernsayings --one --color
 
+# Display all sayings without meanings
+./southernsayings -nm
+
 # Get help
 ./southernsayings -h
 ```
