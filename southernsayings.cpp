@@ -133,7 +133,7 @@ const vector<Saying> southernSayings = {
     {"He means well.", "Someone who tries but often fails or messes things up"},
     {"She's a handful!", "A polite way of saying someone's difficult and/or dramatic, and might include the word real in front of handful"},
     {"He could eat corn through a picket fence.", "Describes someone with gapped teeth"},
-    {"He's all hat and no cattle.", "Someone who talks big but lacks substance."},
+    {"Beats all I've ever seen.", "That tops everything. Variations: beats all I ever did see, beats all, that beats all"},
     {"You'd have to water that idea for it to grow.", "A humorous way of calling it a dumb idea"},
     {"She's a real peach, with a pit.", "She seems sweet but she has a mean streak"},
     {"He's slicker than owl snot.", "Describes someone charming and maybe too much so"},
