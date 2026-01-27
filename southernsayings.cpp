@@ -308,7 +308,7 @@ const vector<Saying> southernSayings = {
     {"Ruckus", "A commotion"},
     {"There's not a pot too crooked that a lid won't fit.","Southern positivity is expressed well with this one. It means there's someone out there for everyone."},
     {"We're so poor, we can't afford to pay attention.","Southern way of expressing being very poor. Often combined with 'when I was growing up'"},
-    {"Yes ma'am or yessir","While these are only good manners, Southerners say this more often."},
+    {"Yes ma'am or yessir","While these are only good manners, Southerners say this often."},
     {"Sho nuff", "sure enough"},
     {"Close the door! You're letting all the good air out.","Air conditioning is so valued in the South, and if you leave the door open too long, you will hear about it!"},
     {"Well that's the pot calling the kettle black.","One person accuses another of a fault that the first person is also guilty of."},
