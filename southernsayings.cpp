@@ -316,7 +316,8 @@ const vector<Saying> southernSayings = {
     {"Like putting socks on a rooster","The task at hand is almost impossible."},
     {"Well goodness gracious","Exclamation used to express surprise, shock, or mild dismay"},
     {"Crawdads","Southerners call crawfish this."},
-    {"Ragamuffin","If you look like a ragamuffin, you don't look good enough to leave the house."}
+    {"Ragamuffin","If you look like a ragamuffin, you don't look good enough to leave the house."},
+    {"The greatest thing since pockets in blue jeans.", "This is a twist on the more common greatest thing since sliced bread, used to describe something particularly useful, clever, or innovative."}
 };
 
 void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
