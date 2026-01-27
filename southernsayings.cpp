@@ -177,7 +177,7 @@ const vector<Saying> southernSayings = {
     {"A month of Sundays", "A very long time. It might be in reference to something like not visiting your mom for a while."},
     {"Piddlin'", "A piddlin' is a small amount that's not worth bothering with. Someone who is piddlin' in the yard is wasting time and not doing much."},
     {"Gimme some sugar", "What Grandma says when you pull in the driveway, pop out of the car, and come running. She's not looking for sweets; she wants a hug and a kiss."},
-    {"Well, I Declare!", "A Southerner using this phrase could be declaring any number of things: surprise, dissent, happiness. The only requirement is that you declare it loud and proud."},
+    {"Well, I declare!", "A Southerner using this phrase could be declaring any number of things: surprise, dissent, happiness. The only requirement is that you declare it loud and proud."},
     {"Hush your mouth", "A Southerner might use this to tell someone to stop complaining or to be quiet. It's also used to tell someone to stop being a baby."},
     {"I'll tell you what", "This is a point of emphasis and exclamation that often ends without any additional telling at all. It can also be the opening to striking a bargain, sharing a strongly held opinion, or offering a piece of advice you may or may not want to hear."},
     {"I reckon", "This can mean -- I suppose, I think, or I imagine. It is a quintessential Southern phrase, said by friends and family on porches and in rocking chairs all across the South."},
