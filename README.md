@@ -28,29 +28,29 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 
 ### Options
 
-- `-1, --one` - Display a single random saying
-- `-s, --separate` - Separate lines format: saying on one line, meaning on the next, then a blank line (useful for readable output)
+- `-h, --help` - Display this help message
+- *(none)* - Display one random saying
+- `-a, --all` - Display all sayings shuffled
+- `-t, --together` - Display saying and meaning on one line with colon separator
 - `-c, --color` - Colored output: pink for saying, orange for meaning
 - `-nm, --nomeaning` - Display only the saying without the meaning
-- `-h, --help` - Display this help message
-- *(none)* - Display all sayings in shuffled order
 
 ### Examples
 
 ```bash
-# Display all sayings shuffled
+# Display one random saying
 ./southernsayings
 
-# Display one random saying
-./southernsayings -1
+# Display all sayings shuffled
+./southernsayings -a
 
-# Display all sayings with colors and separate lines
-./southernsayings --color --separate
+# Display one random sayings in colors
+./southernsayings --color
 
-# Display one random saying in color
-./southernsayings --one --color
+# Display all sayings shuffled with colors on one line
+./southernsayings -a --color -t
 
-# Display all sayings without meanings
+# Display one random saying without the meaning
 ./southernsayings -nm
 
 # Get help
@@ -59,10 +59,10 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 
 ## Features
 
-- 260+ Southern sayings with detailed meanings
+- 370+ Southern sayings with detailed meanings
 - Random selection or display all sayings
 - Colored output support (pink for sayings, orange for meanings)
-- Separate line formatting for better readability
+- Separate line formatting option for more compact foormat
 - Automatic shuffling of sayings
 - Helpful command-line interface with built-in help
 
