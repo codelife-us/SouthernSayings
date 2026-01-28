@@ -23,17 +23,16 @@
 // Southern Sayings
 //     by Code Life
 //     command line version using modern C++20
-//     version 1.0 - 1/26/2026
+//     version 1.0 - 1/28/2026
 // Description: A collection of Southern sayings with their meanings.
 //
 // Command Line Options:
-//   -1, --one        Display a single random saying
-//   -s, --separate   Separate lines format: saying on one line, meaning on the next,
-//                    then a blank line (useful for readable output)
+//   -a, --all        Display all sayings in shuffled order
+//   -t, --together   Display saying and meaning on one line with colon separator
 //   -c, --color      Colored output: pink for saying, orange for meaning
 //   -nm, --nomeaning Display only the saying without the meaning
 //   -h, --help       Display this help message
-//   (none)           Display all sayings in shuffled order
+//   (none)           Display a single random saying (default)
 
 #include <array>
 #include <string>
@@ -54,7 +53,7 @@ const vector<Saying> southernSayings = {
     {"Colder than a well digger's behind in January", "It's freezing cold, often used during a sharp winter morning"},
     {"It's so hot the hens are laying hard-boiled eggs.", "A funny way to exaggerate the high temperature"},
     {"It's raining like a cow peeing on a flat rock.", "Describes a sudden heavy rain with a splashy and chaotic feel"},
-    {"Hotter than blue blazes", "Describes etremely hot and hellish southern heat"},
+    {"Hotter than blue blazes", "Describes extremely hot and hellish southern heat"},
     {"So humid, I could wring out the air", "Describes the sticky, muggy humidity"},
     {"The devil's beating his wife.", "The sun is shining while it is raining at the same time."},
     {"Sweatin' like a sinner in church", "Used when someone is uncomfortably hot or nervous"},
@@ -139,9 +138,9 @@ const vector<Saying> southernSayings = {
     {"He's slicker than owl snot.", "Describes someone charming and maybe too much so"},
     {"She's sweeter than a June bug on a honeysuckle vine", "An adorable person with great behavior"},
     {"He's been bit by the love bug", "Clearly smitten or falling in love"},
-    {"She put a spell on him stronger than grandma's moonshine", "Deeply infatuated and under someone's charm"},
-    {"He's more whipped than mashed taters at a church supper", "Comically devoted or overly obedient in a relationship"},
-    {"She could charm the socks off a rooster", "Very flirtatious"},
+    {"She put a spell on him stronger than grandma's moonshine.", "Deeply infatuated and under someone's charm"},
+    {"He's more whipped than mashed taters at a church supper.", "Comically devoted or overly obedient in a relationship"},
+    {"She could charm the socks off a rooster.", "Very flirtatious"},
     {"Well, I'll be?", "Expressing pure and wide-eyed astonishment"},
     {"I'll be derned", "Expression of surprise"},
     {"Possum in a rosebush!", "Expression of surprise"},
@@ -253,7 +252,7 @@ const vector<Saying> southernSayings = {
     {"Gully washer", "An intense, heavy rainstorm that causes water to rush through ditches and gullies, often leading to temporary flooding"},
     {"That'll put hair on your chest", "A phrase used to describe something particularly strong or intense, often about food or drink that has a bold, powerful effect."},
     {"Kiss my grits and call it gravy", "A sassy way of dismissing someone's opinion or response to something you've done or said, signaling that you don't care what they think or say."},
-    {"Butter my butt and call me a biscuit", "An expression of surprise or disbelief, similar to saying, \"Well, I'll be!\""},
+    {"Butter my butt and call me a biscuit", "An expression of surprise or disbelief"},
     {"Hog wild", "Thrilled or enthusiastic, often acting with unchecked excitement or energy"},
     {"Give it a whirl", "Encourages someone to try something, even if they're unsure how it will turn out."},
     {"Hand to mouth", "Living with just enough to get by, often scraping together what's needed daily, with little to no extra for savings or luxuries."},
@@ -317,7 +316,113 @@ const vector<Saying> southernSayings = {
     {"Well goodness gracious","Exclamation used to express surprise, shock, or mild dismay"},
     {"Crawdads","Southerners call crawfish this."},
     {"Ragamuffin","If you look like a ragamuffin, you don't look good enough to leave the house."},
-    {"The greatest thing since pockets in blue jeans.", "This is a twist on the more common greatest thing since sliced bread, used to describe something particularly useful, clever, or innovative."}
+    {"The greatest thing since pockets in blue jeans.", "This is a twist on the more common greatest thing since sliced bread, used to describe something particularly useful, clever, or innovative."},
+// new sayings added 1/28/2026
+    {"Slower than a Sunday afternoon", "Moving at a leisurely and peaceful pace"},
+    {"He can't carry a tune in a bucket.", "Someone who is a terrible singer"},
+    {"She's catty-cornered to common sense.", "Lacks logic or is acting irrationally"},
+    {"Happy as a dead pig in the sunshine", "Content or satisfied, often used sarcastically"},
+    {"Lit up like a Christmas tree", "Extremely excited or overly decorated"},
+    {"Full of beans", "Energetic or lively"},
+    {"Old as dirt", "Very old"},
+    {"Ain't got a pot to piss in", "Very poor"},
+    {"Wound up tighter than a two-dollar watch", "Extremely tense or stressed"},
+    {"Sweet as pie", "Very kind or pleasant"},
+    {"That just don't cut the mustard.", "That's not good enough or doesn't meet standards"},
+    {"High on the hog", "Living in luxury or comfort"},
+    {"It's too wet to plow.", "An excuse for being unable to work, often used as a general delay"},
+    {"Like a bump on a log", "Sitting idle or inactive"},
+    {"She's got more twists than a mountain road.", "Describes someone unpredictable or complicated"},
+    {"She thinks she's the only hen in the coop.", "Believes they are the center of attention or special"},
+    {"Tough as nails", "Resilient and strong"},
+    {"Smooth as silk", "Very suave or polished in demeanor"},
+    {"Full as a tick", "Completely full after eating"},
+    {"Talking a blue streak", "Speaking very quickly and non-stop"},
+    {"Don't let the bedbugs bite.", "A common bedtime well-wish."},
+    {"Good gravy!", "An exclamation of surprise"},
+    {"He couldn't find his way out of a paper bag.", "Completely lost or incompetent"},
+    {"Dumb as a box of rocks", "Extremely unintelligent"},
+    {"You can put your boots in the oven, but that don't make 'em biscuits.", "Just because something seems like something doesn't mean it is that thing."},
+    {"Don't get your feathers ruffled.", "Don't get upset or agitated."},
+    {"Well, that just dills my pickle!", "Expression of annoyance or frustration"},
+    {"Grinning like a mule eating briars", "Smiling widely, often smugly"},
+    {"She's wound tighter than an eight-day clock.", "Very tense or high-strung"},
+    {"Sweeter than a Georgia peach", "Extremely sweet or pleasant"},
+    {"Hotter than a stolen tamale", "Very hot or under pressure"},
+    {"Cold as a witch's tit in a brass bra", "Extremely cold"},
+    {"That old boy's strong as an ox.", "Very physically strong"},
+    {"Like a moth to a flame", "Drawn irresistibly to something"},
+    {"You look like you've been dragged through a knothole backwards.", "Disheveled or exhausted appearance"},
+    {"Stick out like a sore thumb", "Very noticeable or conspicuous"},
+    {"More fun than a barrel of monkeys", "Extremely fun or entertaining"},
+    {"No spring chicken", "Not young anymore"},
+    {"Looks like something the cat dragged in", "Looks messy or unkempt"},
+    {"Easy as pie", "Very easy to do"},
+    {"Riding shotgun", "Sitting in the front passenger seat"},
+    {"Doesn't have both oars in the water", "Mentally lacking or not thinking straight"},
+    {"Naked as a jaybird", "Completely naked"},
+    {"Don't bite off more than you can chew.", "Don't take on more than you can handle"},
+    {"Long in the tooth", "Old or aging"},
+    {"Like shooting fish in a barrel", "Extremely easy"},
+    {"If wishes were horses, beggars would ride.", "Wishing for something doesn't make it happen"},
+    {"More nervous than a turkey in November", "Extremely anxious"},
+    {"Quick as greased lightning", "Very fast"},
+    {"Like a fish out of water", "Feeling out of place or uncomfortable"},
+    {"Can't see the forest for the trees", "Too focused on details to see the big picture"},
+    {"Like putting the cart before the horse", "Doing things out of proper order"},
+    {"Spitting image", "Looking exactly like someone else"},
+    {"Right as rain", "Everything is fine or correct"},
+    {"Hootin' and hollerin'", "Making a lot of noise, usually in celebration"},
+    {"Balled the jack", "To move very fast or go all out"},
+    {"Flew the coop", "Left or escaped"},
+    {"Rode off into the sunset", "Left for good or moved on"},
+    {"Don't take any wooden nickels.", "Don't be fooled or cheated"},
+    {"He's a few sandwiches short of a picnic.", "Lacking intelligence"},
+    {"All show and no go", "Looks good but lacks substance"},
+    {"Cuter than a button", "Extremely cute"},
+    {"Howdy", "Hello"},
+    {"Y'all come back now, ya hear?", "A friendly invitation to return"},
+    {"Cut the lights", "Turn off the lights"},
+    {"Carry you somewhere", "Drive you somewhere"},
+    {"Mash the button", "Press the button"},
+    {"Pocketbook", "Purse"},
+    {"Supper", "Dinner"},
+    {"Do what now?", "Excuse me? or What did you say?"},
+    {"How's your mom 'n 'em?", "How is your family?"},
+    {"Lord have mercy!", "Expression of surprise or exasperation"},
+    {"Bless it!", "Expression of sympathy or frustration"},
+    {"Good night!", "Expression of surprise (not a goodbye)"},
+    {"Land sakes!", "Expression of surprise or astonishment"},
+    {"Oh my stars!", "Expression of surprise"},
+    {"Well, I'll swan!", "Expression of shock or disbelief"},
+    {"For crying out loud!", "Expression of frustration"},
+    {"Lordy, Lordy!", "Expression of surprise or emphasis"},
+    {"It's hotter than the hinges of hell.", "It's extremely hot"},
+    {"Whatever floats your boat", "Whatever makes you happy"},
+    {"Tickled pink", "Very pleased or delighted"},
+    {"Sunday-go-to-meeting clothes", "Your best clothes"},
+    {"Big ol'", "Big (used as an intensifier)"},
+    {"Little bitty", "Very small"},
+    {"Directly", "Soon or in a little while"},
+    {"Don't get your tail feathers in a bunch.", "Don't get upset"},
+    {"At the end of my rope", "Frustrated or at my limit"},
+    {"Two shakes of a lamb's tail", "Very quickly"},
+    {"That's the way the cookie crumbles.", "That's just how things happen"},
+    {"Dead as a doornail", "Completely dead"},
+    {"Grinnin' like a jackass eatin' briars", "Smiling widely, often in a silly or smug way"},
+    {"In a coon's age", "In a very long time"},
+    {"Gooder than grits", "Very good or excellent"},
+    {"Don't make me open up a can of whoop-ass.", "Don't provoke me to fight or punish you."},
+    {"Fine and dandy", "Everything is great."},
+    {"The apple doesn't fall far from the tree.", "Children resemble their parents."},
+    {"Don't put all your eggs in one basket.", "Don't risk everything on one thing."},
+    {"That'll preach!", "That's a great point or truth."},
+    {"You don't say!", "Expression of surprise or interest"},
+    {"Land o' Goshen!", "Expression of surprise"},
+    {"My stars!", "Expression of surprise"},
+    {"Fiddlesticks!", "Mild exclamation of annoyance"},
+    {"Well, shut my mouth!", "Expression of surprise or disbelief"},
+    {"Heavens above!", "Expression of surprise or exasperation"}    
 };
 
 void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
@@ -357,33 +462,32 @@ void displayHelp() {
     std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
     std::cout << "Usage: ./southernsayings [OPTIONS]\n\n";
     std::cout << "Options:\n";
-    std::cout << "  -1, --one        Display a single random saying\n";
-    std::cout << "  -s, --separate   Separate lines format: saying on one line, meaning on the next,\n";
-    std::cout << "                   then a blank line (useful for readable output)\n";
+    std::cout << "  -a, --all        Display all sayings in shuffled order\n";
+    std::cout << "  -t, --together   Display saying and meaning on one line with colon separator\n";
     std::cout << "  -c, --color      Colored output: pink for saying, orange for meaning\n";
     std::cout << "  -nm, --nomeaning Display only the saying without the meaning\n";
     std::cout << "  -h, --help       Display this help message\n";
-    std::cout << "  (none)           Display all sayings in shuffled order\n\n";
+    std::cout << "  (none)           Display a single random saying (default)\n\n";
     std::cout << "Examples:\n";
-    std::cout << "  ./southernsayings                  - Display all sayings shuffled\n";
-    std::cout << "  ./southernsayings -1               - Display one random saying\n";
-    std::cout << "  ./southernsayings --color --separate - Display all sayings with colors and separate lines\n";
-    std::cout << "  ./southernsayings --one --color    - Display one random saying in color\n";
-    std::cout << "  ./southernsayings -nm              - Display all sayings without meanings\n";
+    std::cout << "  ./southernsayings                  - Display one random saying\n";
+    std::cout << "  ./southernsayings -a               - Display all sayings shuffled\n";
+    std::cout << "  ./southernsayings --color          - Display one random saying in color\n";
+    std::cout << "  ./southernsayings -a --color -t    - Display all sayings with colors on one line\n";
+    std::cout << "  ./southernsayings -nm              - Display one random saying without meaning\n";
 }
 
 int main(int argc, char* argv[]) {
     // Parse command line options
-    bool separateLines = false;
-    bool randomSingle = false;
+    bool together = false;      // -t flag (default is separate lines)
+    bool showAll = false;       // -a flag (default is single random)
     bool colored = false;
     bool noMeaning = false;
     
     for (int i = 1; i < argc; i++) {
-        if (string(argv[i]) == "-s" || string(argv[i]) == "--separate") {
-            separateLines = true;
-        } else if (string(argv[i]) == "-1" || string(argv[i]) == "--one") {
-            randomSingle = true;
+        if (string(argv[i]) == "-t" || string(argv[i]) == "--together") {
+            together = true;
+        } else if (string(argv[i]) == "-a" || string(argv[i]) == "--all") {
+            showAll = true;
         } else if (string(argv[i]) == "-c" || string(argv[i]) == "--color") {
             colored = true;
         } else if (string(argv[i]) == "-nm" || string(argv[i]) == "--nomeaning") {
@@ -394,15 +498,10 @@ int main(int argc, char* argv[]) {
         }
     }
     
-    if (randomSingle) {
-        // Display a single random saying
-        random_device rd;
-        mt19937 gen(rd());
-        uniform_int_distribution<> dis(0, southernSayings.size() - 1);
-        
-        const auto& saying = southernSayings[dis(gen)];
-        outputSaying(saying, separateLines, colored, noMeaning);
-    } else {
+    // separateLines is now the default (true), unless -t is passed
+    bool separateLines = !together;
+    
+    if (showAll) {
         // Display all sayings (shuffled)
         std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n";
         std::cout << "Brought to you by Code Life\n\n";
@@ -418,6 +517,14 @@ int main(int argc, char* argv[]) {
         }
         
         std::cout << "\nTotal sayings: " << southernSayings.size() << "\n";
+    } else {
+        // Default: Display a single random saying
+        random_device rd;
+        mt19937 gen(rd());
+        uniform_int_distribution<> dis(0, southernSayings.size() - 1);
+        
+        const auto& saying = southernSayings[dis(gen)];
+        outputSaying(saying, separateLines, colored, noMeaning);
     }
     return 0;
 }
