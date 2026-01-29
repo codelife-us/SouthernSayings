@@ -427,7 +427,8 @@ const vector<Saying> southernSayings = {
     {"Got your ears lowered","Got a haircut"},
     {"Haulin' tail","Moving very fast or rushing"},
     {"Ain't right","Something's off about that person."},
-    {"Holler at me","Used in farewell saying like \"stay in touch\" or contact me when needed"}
+    {"Holler at me","Used in farewell saying like \"stay in touch\" or contact me when needed"},
+    {"Maters","Tomatoes. Also, there are taters for potatoes, and sometimes nanner for banana."}
 };
 
 void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
