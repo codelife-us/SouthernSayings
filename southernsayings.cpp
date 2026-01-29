@@ -418,11 +418,16 @@ const vector<Saying> southernSayings = {
     {"Don't put all your eggs in one basket.", "Don't risk everything on one thing."},
     {"That'll preach!", "That's a great point or truth."},
     {"You don't say!", "Expression of surprise or interest"},
-    {"Land o' Goshen!", "Expression of surprise"},
+    {"Land o' Goshen!", "Expression of surprise. Goshen was the region in Egypt inhabited by the Israelites until the Exodus in the Bible."},
     {"My stars!", "Expression of surprise"},
     {"Fiddlesticks!", "Mild exclamation of annoyance"},
     {"Well, shut my mouth!", "Expression of surprise or disbelief"},
-    {"Heavens above!", "Expression of surprise or exasperation"}    
+    {"Heavens above!", "Expression of surprise or exasperation"},
+    {"Even a blind hog finds an acorn now and then.","Even someone inept or unlucky will sometimes succeed."},
+    {"Got your ears lowered","Got a haircut"},
+    {"Haulin' tail","Moving very fast or rushing"},
+    {"Ain't right","Something's off about that person."},
+    {"Holler at me","Used in farewell saying like \"stay in touch\" or contact me when needed"}
 };
 
 void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
