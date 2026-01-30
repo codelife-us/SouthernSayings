@@ -418,6 +418,7 @@ const vector<Saying> southernSayings = {
     {"Don't put all your eggs in one basket.", "Don't risk everything on one thing."},
     {"That'll preach!", "That's a great point or truth."},
     {"You don't say!", "Expression of surprise or interest"},
+    {"He's mule-stubborn and twice as ornery","Not only stubborn but also very difficult to deal with"},
     {"Land o' Goshen!", "Expression of surprise. Goshen was the region in Egypt inhabited by the Israelites until the Exodus in the Bible."},
     {"My stars!", "Expression of surprise"},
     {"Fiddlesticks!", "Mild exclamation of annoyance"},
@@ -428,7 +429,7 @@ const vector<Saying> southernSayings = {
     {"Haulin' tail","Moving very fast or rushing"},
     {"Ain't right","Something's off about that person."},
     {"Holler at me","Used in farewell saying like \"stay in touch\" or contact me when needed"},
-    {"Maters","Tomatoes. Also, there are taters for potatoes, and sometimes nanner for banana."}
+    {"Maters","Tomatoes. Also, potatoes may be called taters, and sometimes a banana is called a nanner."}
 };
 
 void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
