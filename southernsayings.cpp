@@ -23,16 +23,8 @@
 // Southern Sayings
 //     by Code Life
 //     command line version using modern C++20
-//     version 1.0 - 1/28/2026
+//     version 1.3 - 2/2/2026
 // Description: A collection of Southern sayings with their meanings.
-//
-// Command Line Options:
-//   -a, --all        Display all sayings in shuffled order
-//   -t, --together   Display saying and meaning on one line with colon separator
-//   -c, --color      Colored output: pink for saying, orange for meaning
-//   -nm, --nomeaning Display only the saying without the meaning
-//   -h, --help       Display this help message
-//   (none)           Display a single random saying (default)
 
 #include <array>
 #include <string>
@@ -40,6 +32,7 @@
 #include <random>
 #include <algorithm>
 #include <vector>
+#include <numeric> // Added for std::iota
 
 using namespace std;
 
@@ -105,7 +98,7 @@ const vector<Saying> southernSayings = {
     {"Crooked as a dog's hind leg", "Refers to someone dishonest or shady"},
     {"Uglier than a mud fence after a rainstorm", "A brutal way to call someone unattractive"},
     {"Like herding cats", "Trying to control a chaotic or unmanageable situation"},
-    {"Like a possum playing dead", "Avoids problems or pretends not to notice them"},
+    {"Like a person playing dead", "Avoids problems or pretends not to notice them"},
     {"Meaner than a skillet full of rattlesnakes", "Describes someone especially vicious or angry"},
     {"More tricks than a squirrel in a corn crib", "Someone who's clever or sneaky"},
     {"Runs around like a chicken with its head cut off", "Acting frantic or disorganized in an inefficient way"},
@@ -158,7 +151,7 @@ const vector<Saying> southernSayings = {
     {"If I had my druthers", "If I had my choice"},
     {"I'm finer than frog hair and not half as slick.", "A funny response to 'How are you?'"},
     {"Don't try to plow through the stump.", "Farm wisdom about choosing the wiser path instead of the hardest one"},
-    {"He was plumb tuckered out.", "Extremely tired or exhausted - Plumb may be a general inensifier word using in other sayings"},
+    {"He was plumb tuckered out.", "Extremely tired or exhausted - Plumb may be a general intensifier word using in other sayings"},
     {"You can catch more flies with honey than with vinegar.", "A proverb about the power of persuasion sometimes used when someone is being 'ugly' in the southern sense"},
     {"She thinks she's so high falutin'.", "Very pretentious"},
     {"Coke", "Not just referring to Coca-Cola but any carbonated soda"},
@@ -230,7 +223,7 @@ const vector<Saying> southernSayings = {
     {"Knee-high to a grasshopper", "This is a hyperbolic expression meaning very young, as in I haven't seen him since he was knee-high to a grasshopper."},
     {"Happy as a lark", "This is someone or something that is very happy."},
     {"Drunker than Cooter Brown", "This was a real person who lived along the Mason-Dixon line during the civil war. As the years went by, Cooter Brown's reputation grew, and his name became synonymous with someone who was always inebriated."},
-    {"Clean as a whistle", "Someone who is innocent or something is entirely clean and dirt-free, judging from its apppearance"},
+    {"Clean as a whistle", "Someone who is innocent or something is entirely clean and dirt-free, judging from its appearance"},
     {"Scarce as hen's teeth", "This is something very rare or difficult to find. Hens do not have teeth."},
     {"She's got more nerve than Carter's got liver pills", "Carters Products started as a pill-peddling company in the 19th century. Carters repped its \"Little Liver Pills\" so hard a Southern saying spawned from the advertisements. Alas, the Federal Trade Commission forced the drug-group to drop the \"liver\" portion of the ad, claiming it was deceptive. They became \"Carter's Little Pills\" in 1951. The phrase stuck but sometimes you hear the phrase without liver in it."},
     {"All hat and no cattle", "to be overly boastful about yourself without much to back it up"},
@@ -317,7 +310,6 @@ const vector<Saying> southernSayings = {
     {"Crawdads","Southerners call crawfish this."},
     {"Ragamuffin","If you look like a ragamuffin, you don't look good enough to leave the house."},
     {"The greatest thing since pockets in blue jeans.", "This is a twist on the more common greatest thing since sliced bread, used to describe something particularly useful, clever, or innovative."},
-// new sayings added 1/28/2026
     {"Slower than a Sunday afternoon", "Moving at a leisurely and peaceful pace"},
     {"He can't carry a tune in a bucket.", "Someone who is a terrible singer"},
     {"She's catty-cornered to common sense.", "Lacks logic or is acting irrationally"},
@@ -429,109 +421,119 @@ const vector<Saying> southernSayings = {
     {"Haulin' tail","Moving very fast or rushing"},
     {"Ain't right","Something's off about that person."},
     {"Holler at me","Used in farewell saying like \"stay in touch\" or contact me when needed"},
-    {"Maters","Tomatoes. Also, potatoes may be called taters, and sometimes a banana is called a nanner."}
+    {"Maters","Tomatoes. Also, potatoes may be called taters, and sometimes a banana is called a nanner."},
+    // new sayings on 2/2/2026
+    {"If you want the rainbow, you gotta put up with the rain","You have to endure difficulties to enjoy the good times."},
+    {"Ill as a hornet", "Very angry or upset"},
+    {"I could chew up nails and spit out a barbed wire fence","Very angry or upset"},
+    {"Bless your pea-pickin' little heart","Variation of bless your heart and may be affectionate or sarcastic depending on context"},
+    {"I can't win for losing","Can't seem to succeed no matter what I do"},
+    {"I'm as busy as a farmer with one hoe and two rattlesnakes","Having too much to do with inadequate resources"},
+    {"He could talk the dogs off a meat truck","Very persuasive and charming"},
+    {"Mess of catfish","Fried catfish is a staple of Southern food. A mess is enough to feed your family."}
 };
 
-void outputSaying(const Saying& saying, bool separateLines = false, bool colored = false, bool noMeaning = false) {
+void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
     // ANSI color codes
-    const string pinkColor = "\033[35m";      // Pink/Magenta
-    const string orangeColor = "\033[33m";   // Orange/Yellow
-    const string resetColor = "\033[0m";     // Reset to default
-    
+    const string pinkColor = "\033[35m";
+    const string orangeColor = "\033[33m";
+    const string resetColor = "\033[0m";
+
+    string label = showNumber ? "[" + to_string(sayingIndex + 1) + "] " : "";
+
     if (noMeaning) {
-        // Only display the saying
-        if (colored) {
-            std::cout << pinkColor << saying.text << resetColor << "\n";
-        } else {
-            std::cout << saying.text << "\n";
-        }
-        if (separateLines) {
-            std::cout << "\n";
-        }
+        if (colored) cout << label << pinkColor << saying.text << resetColor << "\n";
+        else cout << label << saying.text << "\n";
+        if (separateLines) cout << "\n";
     } else if (colored) {
         if (separateLines) {
-            std::cout << pinkColor << saying.text << resetColor << "\n"
-                      << orangeColor << saying.meaning << resetColor << "\n\n";
+            cout << label << pinkColor << saying.text << resetColor << "\n"
+                 << orangeColor << saying.meaning << resetColor << "\n\n";
         } else {
-            std::cout << pinkColor << saying.text << resetColor << ": "
-                      << orangeColor << saying.meaning << resetColor << "\n";
+            cout << label << pinkColor << saying.text << resetColor << ": "
+                 << orangeColor << saying.meaning << resetColor << "\n";
         }
     } else {
         if (separateLines) {
-            std::cout << saying.text << "\n" << saying.meaning << "\n\n";
+            cout << label << saying.text << "\n" << saying.meaning << "\n\n";
         } else {
-            std::cout << saying.text << ": " << saying.meaning << "\n";
+            cout << label << saying.text << ": " << saying.meaning << "\n";
         }
     }
 }
 
 void displayHelp() {
-    std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
-    std::cout << "Usage: ./southernsayings [OPTIONS]\n\n";
-    std::cout << "Options:\n";
-    std::cout << "  -a, --all        Display all sayings in shuffled order\n";
-    std::cout << "  -t, --together   Display saying and meaning on one line with colon separator\n";
-    std::cout << "  -c, --color      Colored output: pink for saying, orange for meaning\n";
-    std::cout << "  -nm, --nomeaning Display only the saying without the meaning\n";
-    std::cout << "  -h, --help       Display this help message\n";
-    std::cout << "  (none)           Display a single random saying (default)\n\n";
-    std::cout << "Examples:\n";
-    std::cout << "  ./southernsayings                  - Display one random saying\n";
-    std::cout << "  ./southernsayings -a               - Display all sayings shuffled\n";
-    std::cout << "  ./southernsayings --color          - Display one random saying in color\n";
-    std::cout << "  ./southernsayings -a --color -t    - Display all sayings with colors on one line\n";
-    std::cout << "  ./southernsayings -nm              - Display one random saying without meaning\n";
+    cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
+    cout << "Usage: ./southernsayings [OPTIONS]\n\n";
+    cout << "Options:\n";
+    cout << "  (none)               Display a single random saying (default)\n\n";
+    cout << "  -a, --all            Display all sayings in shuffled order\n";
+    cout << "  -t, --together       Display saying and meaning on one line with colon separator\n";
+    cout << "  -c, --color          Colored output: pink for saying, orange for meaning\n";
+    cout << "  -nm, --nomeaning     Display only the saying without the meaning\n";
+    cout << "  -sn, --shownumber    Display the unique saying number in brackets\n";
+    cout << "  -p, --pick [number]  Display a specific saying by number\n";
+    cout << "  -h, --help           Display this help message\n";
 }
 
 int main(int argc, char* argv[]) {
-    // Parse command line options
-    bool together = false;      // -t flag (default is separate lines)
-    bool showAll = false;       // -a flag (default is single random)
-    bool colored = false;
-    bool noMeaning = false;
-    
+    bool together = false, showAll = false, colored = false, noMeaning = false, showNumber = false, pickSpecific = false;
+    int pickedNumber = -1;
+
     for (int i = 1; i < argc; i++) {
-        if (string(argv[i]) == "-t" || string(argv[i]) == "--together") {
-            together = true;
-        } else if (string(argv[i]) == "-a" || string(argv[i]) == "--all") {
-            showAll = true;
-        } else if (string(argv[i]) == "-c" || string(argv[i]) == "--color") {
-            colored = true;
-        } else if (string(argv[i]) == "-nm" || string(argv[i]) == "--nomeaning") {
-            noMeaning = true;
-        } else if (string(argv[i]) == "-h" || string(argv[i]) == "--help") {
+        string arg = argv[i];
+        if (arg == "-t" || arg == "--together") together = true;
+        else if (arg == "-a" || arg == "--all") showAll = true;
+        else if (arg == "-c" || arg == "--color") colored = true;
+        else if (arg == "-nm" || arg == "--nomeaning") noMeaning = true;
+        else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
+        else if (arg == "-p" || arg == "--pick") {
+            if (i + 1 < argc) {
+                try {
+                    pickedNumber = stoi(argv[++i]);
+                    pickSpecific = true;
+                } catch (...) {
+                    cerr << "Error: --pick requires a valid number.\n";
+                    return 1;
+                }
+            } else {
+                cerr << "Error: --pick requires a number.\n";
+                return 1;
+            }
+        } else if (arg == "-h" || arg == "--help") {
             displayHelp();
             return 0;
         }
     }
-    
-    // separateLines is now the default (true), unless -t is passed
+
     bool separateLines = !together;
-    
+    // We work with indices to preserve the original association regardless of output order
+    vector<int> originalIndices(southernSayings.size());
+    iota(originalIndices.begin(), originalIndices.end(), 0);
+
     if (showAll) {
-        // Display all sayings (shuffled)
-        std::cout << "Southern Sayings - A collection of Southern sayings with their meanings\n";
-        std::cout << "Brought to you by Code Life\n\n";
-        
-        auto sayingsCopy = southernSayings;
+        cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
         random_device rd;
         mt19937 gen(rd());
-        std::shuffle(sayingsCopy.begin(), sayingsCopy.end(), gen);
-        
-        for (const auto& saying : sayingsCopy) {
-            // Print each saying and its meaning
-            outputSaying(saying, separateLines, colored, noMeaning);
+        shuffle(originalIndices.begin(), originalIndices.end(), gen);
+
+        for (int idx : originalIndices) {
+            outputSaying(southernSayings[idx], idx, separateLines, colored, noMeaning, showNumber);
         }
-        
-        std::cout << "\nTotal sayings: " << southernSayings.size() << "\n";
+        cout << "\nTotal sayings: " << southernSayings.size() << "\n";
+    } else if (pickSpecific) {
+        if (pickedNumber >= 1 && pickedNumber <= static_cast<int>(southernSayings.size())) {
+            outputSaying(southernSayings[pickedNumber-1], pickedNumber-1, separateLines, colored, noMeaning, showNumber);
+        } else {
+            cerr << "Error: Picked number " << pickedNumber << " out of range (1-" << southernSayings.size() << ")\n";
+            return 1;
+        }
     } else {
-        // Default: Display a single random saying
         random_device rd;
         mt19937 gen(rd());
         uniform_int_distribution<> dis(0, southernSayings.size() - 1);
-        
-        const auto& saying = southernSayings[dis(gen)];
-        outputSaying(saying, separateLines, colored, noMeaning);
+        int randomIdx = dis(gen);
+        outputSaying(southernSayings[randomIdx], randomIdx, separateLines, colored, noMeaning, showNumber);
     }
     return 0;
 }
