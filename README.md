@@ -42,19 +42,14 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 ```bash
 # Display one random saying
 ./southernsayings
-
 # Display all sayings shuffled
 ./southernsayings -a
-
 # Display one random sayings in colors
 ./southernsayings --color
-
 # Display all sayings shuffled with colors on one line
 ./southernsayings -a --color -t
-
-# Display one random saying without the meaning
-./southernsayings -nm
-
+# Display one random saying without the meaning and show the number
+./southernsayings -nm -sn
 # Get help
 ./southernsayings -h
 ```
