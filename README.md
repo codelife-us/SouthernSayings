@@ -34,6 +34,8 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 - `-t, --together` - Display saying and meaning on one line with colon separator
 - `-c, --color` - Colored output: pink for saying, orange for meaning
 - `-nm, --nomeaning` - Display only the saying without the meaning
+- `-p, --pick [number]` - Display a specific saying by number
+- `-sn, --shownumber` - Display the unique saying number in brackets
 
 ### Examples
 
