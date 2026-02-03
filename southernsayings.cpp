@@ -23,7 +23,7 @@
 // Southern Sayings
 //     by Code Life
 //     command line version using modern C++20
-//     version 1.3 - 2/2/2026
+//     version 1.4 - 2/3/2026
 // Description: A collection of Southern sayings with their meanings.
 
 #include <array>
@@ -32,7 +32,7 @@
 #include <random>
 #include <algorithm>
 #include <vector>
-#include <numeric> // Added for std::iota
+#include <numeric>
 
 using namespace std;
 
@@ -44,18 +44,18 @@ struct Saying {
 const vector<Saying> southernSayings = {
     {"Hotter than a billy goat in a pepper patch", "It's unbearably hot and almost comically so"},
     {"Colder than a well digger's behind in January", "It's freezing cold, often used during a sharp winter morning"},
-    {"It's so hot the hens are laying hard-boiled eggs.", "A funny way to exaggerate the high temperature"},
-    {"It's raining like a cow peeing on a flat rock.", "Describes a sudden heavy rain with a splashy and chaotic feel"},
+    {"It's so hot the hens are laying hard-boiled eggs", "A funny way to exaggerate the high temperature"},
+    {"It's raining like a cow peeing on a flat rock", "Describes a sudden heavy rain with a splashy and chaotic feel"},
     {"Hotter than blue blazes", "Describes extremely hot and hellish southern heat"},
     {"So humid, I could wring out the air", "Describes the sticky, muggy humidity"},
-    {"The devil's beating his wife.", "The sun is shining while it is raining at the same time."},
+    {"The devil's beating his wife", "The sun is shining while it is raining at the same time."},
     {"Sweatin' like a sinner in church", "Used when someone is uncomfortably hot or nervous"},
     {"Don't know him from Adam's house cat", "Describing a stranger"},
     {"Feels like the Lord left the oven door open", "Used when the weather is oppressively hot and dry"},
     {"About as useful as a screen door on a submarine", "A humorous way to say someone seems useless"},
     {"He's got more nerve than a bum tooth", "Describes someone who is bold or has no shame"},
-    {"She could start an argument in an empty house.", "A drama stirrer or someone always picking a fight"},
-    {"He's slicker than a greased pig at a county fair.", "Someone who's cunning or hard to catch figuratively"},
+    {"She could start an argument in an empty house", "A drama stirrer or someone always picking a fight"},
+    {"He's slicker than a greased pig at a county fair", "Someone who's cunning or hard to catch figuratively"},
     {"Prettier than a speckled pup under a red wagon", "Means someone is absolutely adorable and attractive"},
     {"Dumber than a bag of hammers", "Used to call someone foolish or unintelligent"},
     {"Fixin' to", "This person is about to do something."},
@@ -468,18 +468,48 @@ void displayHelp() {
     cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
     cout << "Usage: ./southernsayings [OPTIONS]\n\n";
     cout << "Options:\n";
-    cout << "  (none)               Display a single random saying (default)\n\n";
+    cout << "  (none)               Display a single random saying (default)\n";
     cout << "  -a, --all            Display all sayings in shuffled order\n";
     cout << "  -t, --together       Display saying and meaning on one line with colon separator\n";
     cout << "  -c, --color          Colored output: pink for saying, orange for meaning\n";
     cout << "  -nm, --nomeaning     Display only the saying without the meaning\n";
     cout << "  -sn, --shownumber    Display the unique saying number in brackets\n";
     cout << "  -p, --pick [number]  Display a specific saying by number\n";
+    cout << "  -j, --json           Output all sayings in JSON format\n";
+    cout << "  --csv                Output all sayings in CSV format\n";
     cout << "  -h, --help           Display this help message\n";
+}
+
+// Helper to escape characters for JSON output
+string escapeJSON(const string& s) {
+    string res;
+    for (char c : s) {
+        if (c == '"') res += "\\\"";
+        else if (c == '\\') res += "\\\\";
+        else if (c == '\b') res += "\\b";
+        else if (c == '\f') res += "\\f";
+        else if (c == '\n') res += "\\n";
+        else if (c == '\r') res += "\\r";
+        else if (c == '\t') res += "\\t";
+        else res += c;
+    }
+    return res;
+}
+
+// Helper to escape characters for CSV output
+string escapeCSV(const string& s) {
+    string res = "\"";
+    for (char c : s) {
+        if (c == '"') res += "\"\"";
+        else res += c;
+    }
+    res += "\"";
+    return res;
 }
 
 int main(int argc, char* argv[]) {
     bool together = false, showAll = false, colored = false, noMeaning = false, showNumber = false, pickSpecific = false;
+    bool jsonOutput = false, csvOutput = false;
     int pickedNumber = -1;
 
     for (int i = 1; i < argc; i++) {
@@ -489,6 +519,8 @@ int main(int argc, char* argv[]) {
         else if (arg == "-c" || arg == "--color") colored = true;
         else if (arg == "-nm" || arg == "--nomeaning") noMeaning = true;
         else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
+        else if (arg == "-j" || arg == "--json") jsonOutput = true;
+        else if (arg == "--csv") csvOutput = true;
         else if (arg == "-p" || arg == "--pick") {
             if (i + 1 < argc) {
                 try {
@@ -506,6 +538,28 @@ int main(int argc, char* argv[]) {
             displayHelp();
             return 0;
         }
+    }
+
+    // Handle JSON output
+    if (jsonOutput) {
+        cout << "[\n";
+        for (size_t i = 0; i < southernSayings.size(); ++i) {
+            cout << "  {\n";
+            cout << "    \"text\": \"" << escapeJSON(southernSayings[i].text) << "\",\n";
+            cout << "    \"meaning\": \"" << escapeJSON(southernSayings[i].meaning) << "\"\n";
+            cout << "  }" << (i < southernSayings.size() - 1 ? "," : "") << "\n";
+        }
+        cout << "]\n";
+        return 0;
+    }
+
+    // Handle CSV output
+    if (csvOutput) {
+        cout << "Text,Meaning\n";
+        for (const auto& saying : southernSayings) {
+            cout << escapeCSV(saying.text) << "," << escapeCSV(saying.meaning) << "\n";
+        }
+        return 0;
     }
 
     bool separateLines = !together;
