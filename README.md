@@ -36,6 +36,8 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 - `-nm, --nomeaning` - Display only the saying without the meaning
 - `-p, --pick [number]` - Display a specific saying by number
 - `-sn, --shownumber` - Display the unique saying number in brackets
+- `-j, --json` - Output the full collection in JSON format
+- `--csv` - Output the full collection in CSV format
 
 ### Examples
 
