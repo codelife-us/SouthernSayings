@@ -430,7 +430,9 @@ const vector<Saying> southernSayings = {
     {"I can't win for losing","Can't seem to succeed no matter what I do"},
     {"I'm as busy as a farmer with one hoe and two rattlesnakes","Having too much to do with inadequate resources"},
     {"He could talk the dogs off a meat truck","Very persuasive and charming"},
-    {"Mess of catfish","Fried catfish is a staple of Southern food. A mess is enough to feed your family."}
+    {"Mess of catfish","Fried catfish is a staple of Southern food. A mess is enough to feed your family."},
+    // new sayings on 2/3/2026
+    {"Wait just a cotton pickin' minute","\"Cotton pickin'\" is a mild expletive to add emphasis without using \"damn\". This is a common way it is used."}
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
