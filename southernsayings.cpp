@@ -432,7 +432,10 @@ const vector<Saying> southernSayings = {
     {"He could talk the dogs off a meat truck","Very persuasive and charming"},
     {"Mess of catfish","Fried catfish is a staple of Southern food. A mess is enough to feed your family."},
     // new sayings on 2/3/2026
-    {"Wait just a cotton pickin' minute","\"Cotton pickin'\" is a mild expletive to add emphasis without using \"damn\". This is a common way it is used."}
+    {"Wait just a cotton pickin' minute","\"Cotton pickin'\" is a mild expletive to add emphasis without using \"damn\". This is a common way it is used."},
+    {"Fer piece","A significant distance - You might hear, \"Billy Bob's house is a fer piece. Git in the truck and I'll carry you there.\""},
+    {"More than you can shake a stick at","An expression meaning a large amount or number of something."},
+    {"What fer?","Funny response to this is \"Cat fur, to make kitten britches.\""},
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
