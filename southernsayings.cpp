@@ -101,7 +101,7 @@ const vector<Saying> southernSayings = {
     {"He's playin' possum", "Avoids problems or pretends not to notice them"},
     {"Meaner than a skillet full of rattlesnakes", "Describes someone especially vicious or angry"},
     {"More tricks than a squirrel in a corn crib", "Someone who's clever or sneaky"},
-    {"Runs around like a chicken with its head cut off", "Acting frantic or disorganized in an inefficient way"},
+    {"Runnin' around like a chicken with its head cut off", "Acting frantic or disorganized in an inefficient way"},
     {"Between a rock and a hard place", "Stuck in a situation where there are no good choices"},
     {"If it were raining soup, I'd get hit with a fork.", "Nothing ever goes right for this person"},
     {"Tougher than a two-dollar steak", "Describes something or someone extremely resilient or hard to handle"},
