@@ -98,7 +98,7 @@ const vector<Saying> southernSayings = {
     {"Crooked as a dog's hind leg", "Refers to someone dishonest or shady"},
     {"Uglier than a mud fence after a rainstorm", "A brutal way to call someone unattractive"},
     {"Like herding cats", "Trying to control a chaotic or unmanageable situation"},
-    {"Like a person playing dead", "Avoids problems or pretends not to notice them"},
+    {"He's playin' possum", "Avoids problems or pretends not to notice them"},
     {"Meaner than a skillet full of rattlesnakes", "Describes someone especially vicious or angry"},
     {"More tricks than a squirrel in a corn crib", "Someone who's clever or sneaky"},
     {"Runs around like a chicken with its head cut off", "Acting frantic or disorganized in an inefficient way"},
