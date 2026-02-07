@@ -31,9 +31,10 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 - `-h, --help` - Display this help message
 - *(none)* - Display one random saying
 - `-a, --all` - Display all sayings shuffled
-- `-t, --together` - Display saying and meaning on one line with colon separator
+- `-1, --oneline` - Display saying and meaning on one line with colon separator
 - `-c, --color` - Colored output: pink for saying, orange for meaning
 - `-nm, --nomeaning` - Display only the saying without the meaning
+- `     --polite` - Display only polite sayings
 - `-p, --pick [number]` - Display a specific saying by number
 - `-sn, --shownumber` - Display the unique saying number in brackets
 - `-j, --json` - Output the full collection in JSON format
