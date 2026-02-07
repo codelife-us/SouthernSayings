@@ -50,20 +50,24 @@ g++ -std=c++20 southernsayings.cpp -o southernsayings
 # Display one random sayings in colors
 ./southernsayings --color
 # Display all sayings shuffled with colors on one line
-./southernsayings -a --color -t
+./southernsayings -a --color -1
 # Display one random saying without the meaning and show the number
 ./southernsayings -nm -sn
+# Display only polite sayings
+./Southernsayings -a --polite
 # Get help
 ./southernsayings -h
 ```
 
 ## Features
 
-- 392 Southern sayings with detailed meanings
+- 409 Southern sayings with meanings
 - Random selection or display all sayings
 - Colored output support (pink for sayings, orange for meanings)
 - Separate line formatting option for more compact format
 - Automatic shuffling of sayings
+- Output to JSON or CSV
+- Polite filter can be used to show only for polite company
 - Helpful command-line interface with built-in help
 
 ## License
