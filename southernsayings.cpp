@@ -455,7 +455,10 @@ const vector<Saying> southernSayings = {
     {true,"Now we're cookin' with grease", "Things are going well or progressing smoothly"},
     {true,"90 to nothing","Moving very fast or at full speed to get things done"},
     {true,"Take a gander", "Look at something"},
-    {true,"Jump the broomstick", "Get married"}
+    {true,"Jump the broomstick", "Get married"},
+    // added 2/9/2026
+    {true,"As popular as a pole cat in a perfume factory", "someone is extremely unwelcome or highly disliked"},
+    {true,"Were you raised in a barn?", "Close the door / You have no manners"}
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
