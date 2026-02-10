@@ -535,6 +535,7 @@ string escapeCSV(const string& s) {
 int main(int argc, char* argv[]) {
     bool together = false, showAll = false, colored = false, noMeaning = false, showNumber = false, pickSpecific = false;
     bool politeOnly = false;
+    bool impoliteOnly = false; // unadvertised option
     bool jsonOutput = false, csvOutput = false;
     int pickedNumber = -1;
 
@@ -545,6 +546,7 @@ int main(int argc, char* argv[]) {
         else if (arg == "-c" || arg == "--color") colored = true;
         else if (arg == "-nm" || arg == "--nomeaning") noMeaning = true;
         else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
+        else if (arg == "--impolite") impoliteOnly = true;
         else if (arg == "-j" || arg == "--json") jsonOutput = true;
         else if (arg == "--csv") csvOutput = true;
         else if (arg == "--polite") politeOnly = true;
@@ -566,11 +568,16 @@ int main(int argc, char* argv[]) {
             return 0;
         }
     }
-
+    if (impoliteOnly && politeOnly) {
+        cerr << "It is impossible to be polite and impolite at the same time.\n";
+        return 1;
+    }
     // Create filtered list of indices based on politeOnly flag
     vector<int> availableIndices;
     for (size_t i = 0; i < southernSayings.size(); ++i) {
-        if (!politeOnly || southernSayings[i].okForPoliteCompany) {
+        if (impoliteOnly && !southernSayings[i].okForPoliteCompany) {
+            availableIndices.push_back(i);        }
+        else if (!politeOnly || southernSayings[i].okForPoliteCompany) {
             availableIndices.push_back(i);
         }
     }
