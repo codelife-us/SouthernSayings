@@ -460,10 +460,10 @@ const vector<Saying> southernSayings = {
     {true,"As popular as a pole cat in a perfume factory", "someone is extremely unwelcome or highly disliked"},
     {true,"Were you raised in a barn?", "Close the door / You have no manners"},
     // added 2/10/2026
-    {true,"Bet your boots","Absolutely certain"),
-    {true,"You ain't just whistlin' Dixie","Someone is serious or not kidding around"),
-    {true,"Rougher than a corn cob in an outhouse","Unpleasant or painful situation to deal with"),
-    {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by")
+    {true,"Bet your boots","Absolutely certain")},
+    {true,"You ain't just whistlin' Dixie","Someone is serious or not kidding around")},
+    {true,"Rougher than a corn cob in an outhouse","Unpleasant or painful situation to deal with")},
+    {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by")}
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
