@@ -135,7 +135,7 @@ const vector<Saying> southernSayings = {
     {true,"She's sweeter than a June bug on a honeysuckle vine", "An adorable person with great behavior"},
     {true,"He's been bit by the love bug", "Clearly smitten or falling in love"},
     {true,"She put a spell on him stronger than grandma's moonshine", "Deeply infatuated and under someone's charm"},
-    {true,"He's more whipped than mashed taters at a church supper", "Comically devoted or overly obedient in a relationship"},
+    {true,"Shacking up", "Living together without being married"},
     {true,"She could charm the socks off a rooster", "Very flirtatious"},
     {true,"Well, I'll be!", "Expressing pure and wide-eyed astonishment"},
     {true,"I'll be derned", "Expression of surprise"},
