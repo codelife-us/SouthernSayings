@@ -506,6 +506,7 @@ void displayHelp() {
     cout << "      --polite         Display only sayings suitable for polite company\n";
     cout << "  -j, --json           Output all sayings in JSON format\n";
     cout << "  --csv                Output all sayings in CSV format\n";
+    cout << "      --appinfo        Display links to the app version\n";
     cout << "  -h, --help           Display this help message\n";
 }
 
@@ -541,6 +542,7 @@ int main(int argc, char* argv[]) {
     bool politeOnly = false;
     bool impoliteOnly = false; // unadvertised option
     bool jsonOutput = false, csvOutput = false;
+    bool appInfo = false; // show links to app version
     int pickedNumber = -1;
 
     for (int i = 1; i < argc; i++) {
@@ -550,10 +552,11 @@ int main(int argc, char* argv[]) {
         else if (arg == "-c" || arg == "--color") colored = true;
         else if (arg == "-nm" || arg == "--nomeaning") noMeaning = true;
         else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
+        else if (arg == "--polite") politeOnly = true;
         else if (arg == "--impolite") impoliteOnly = true;
+        else if (arg == "--appinfo") appInfo = true;
         else if (arg == "-j" || arg == "--json") jsonOutput = true;
         else if (arg == "--csv") csvOutput = true;
-        else if (arg == "--polite") politeOnly = true;
         else if (arg == "-p" || arg == "--pick") {
             if (i + 1 < argc) {
                 try {
@@ -571,6 +574,12 @@ int main(int argc, char* argv[]) {
             displayHelp();
             return 0;
         }
+    }
+    if (appInfo) {
+        cout << "Southern Sayings App - Available on:" << endl;
+        cout << "iOS:" << "https://apps.apple.com/app/southern-sayings/id6757964917" << endl;
+        //cout << "Android: https://play.google.com/store/apps/details?id=pro.codelife.southernsayings\n";
+        return 0;
     }
     if (impoliteOnly && politeOnly) {
         cerr << "It is impossible to be polite and impolite at the same time.\n";
