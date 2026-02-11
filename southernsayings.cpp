@@ -25,7 +25,7 @@
 //     command line version using modern C++
 //     version 1.4 - 2/3/2026
 //     version 1.5 - 2/7/2026 - new option --polite to exclude sayings that aren't suitable for polite company
-//     version 1.6 - 2/10/2026 - new option and sayings added
+//     version 1.6 - 2/10 - 2/11/2026 - new option and sayings added
 // Description: A collection of Southern sayings with their meanings.
 
 #include <array>
