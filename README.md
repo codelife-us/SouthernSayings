@@ -39,6 +39,7 @@ g++ southernsayings.cpp -o southernsayings
 - `-sn, --shownumber` - Display the unique saying number in brackets
 - `-j, --json` - Output the full collection in JSON format
 - `--csv` - Output the full collection in CSV format
+- `--appinfo` - Display the app version links
 
 ### Examples
 
