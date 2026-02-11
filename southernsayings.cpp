@@ -466,7 +466,8 @@ const vector<Saying> southernSayings = {
     {true,"Rougher than a corn cob in an outhouse","Unpleasant or painful situation to deal with"},
     {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by"},
     // added 2/11/2026
-    {true,"Take your own sweet time","Gentle and sarcastic way of expressing irritation at someone being slow"}
+    {true,"Take your own sweet time","Gentle and sarcastic way of expressing irritation at someone being slow"},
+    {true,"No bigger than a minnow in a fishing pond","Something disappointingly small"}
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
