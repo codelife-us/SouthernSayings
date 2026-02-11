@@ -137,7 +137,7 @@ const vector<Saying> southernSayings = {
     {true,"She put a spell on him stronger than grandma's moonshine", "Deeply infatuated and under someone's charm"},
     {true,"He's more whipped than mashed taters at a church supper", "Comically devoted or overly obedient in a relationship"},
     {true,"She could charm the socks off a rooster", "Very flirtatious"},
-    {true,"Well, I'll be?", "Expressing pure and wide-eyed astonishment"},
+    {true,"Well, I'll be!", "Expressing pure and wide-eyed astonishment"},
     {true,"I'll be derned", "Expression of surprise"},
     {true,"Possum in a rosebush!", "Expression of surprise"},
     {true,"Would argue with a fence post", "This describes someone very argumentative, so much they would argue with an inanimate object."},
@@ -464,7 +464,9 @@ const vector<Saying> southernSayings = {
     {true,"Bet your boots","Absolutely certain"},
     {true,"You ain't just whistlin' Dixie","Someone is serious or not kidding around"},
     {true,"Rougher than a corn cob in an outhouse","Unpleasant or painful situation to deal with"},
-    {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by"}
+    {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by"},
+    // added 2/11/2026
+    {true,"Take your own sweet time","Gentle and sarcastic way of expressing irritation at someone being slow"}
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
