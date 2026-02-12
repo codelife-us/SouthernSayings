@@ -467,7 +467,9 @@ const vector<Saying> southernSayings = {
     {true,"Scarce as deviled eggs at a Baptist picnic","Disappears quickly or is hard to come by"},
     // added 2/11/2026
     {true,"Take your own sweet time","Gentle and sarcastic way of expressing irritation at someone being slow"},
-    {true,"No bigger than a minnow in a fishing pond","Something disappointingly small"}
+    {true,"No bigger than a minnow in a fishing pond","Something disappointingly small"},
+    // added 2/12/2026
+    {true,"I love you a bushel and a peck and a hug around the neck", "Quintessential, endearing Southernism used by parents and grandparents to children and loved ones"},
 };
 
 void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
