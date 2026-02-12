@@ -113,7 +113,7 @@ const vector<Saying> southernSayings = {
     {true,"That dog won't hunt", "The plan or idea won't work"},
     {true,"Up a creek without a paddle", "In a bad situation with no clear way out"},
     {true,"Tighter than Dick's hatband", "Extremely cheap or stingy or strange"},
-    {true,"That man squeezes a penny so hard, Abe Lincoln cries", "A vivid exaggeration of frugality"},
+    {true,"Squeezes a quarter so tight the eagle screams", "Vivid exaggeration of the tightwad's frugality. Variations: penny so hard, Abe Lincoln cries; nickel so tight the Indian cries"},
     {true,"She's got champagne taste on a beer budget", "Loves expensive things but can't afford them"},
     {true,"He works harder than a one-eyed dog in a smokehouse", "Someone who works extremely hard"},
     {true,"Got more money than sense", "Rich, but lacking good judgment"},
