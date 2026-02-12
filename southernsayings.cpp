@@ -221,7 +221,7 @@ const vector<Saying> southernSayings = {
     {true,"Tarnation", "some believe this could be a mixture of eternal and damnation. This is usually said like, \"What in tarnation?\" as being shocked by something to get you agitated about."},
     {true,"Hankering", "This means getting a strong desire for something like fried chicken."},
     {true,"Fair to middlin'", "This means doing all right, but not too good or bad - just in the middle"},
-    {true,"Ugly as sin", "This is something rather unsightly or unpleasant"},
+    {true,"Ugly as homemade sin", "This is something rather unsightly or unpleasant"},
     {true,"Fit as a fiddle", "In good health and spirits"},
     {true,"Knee-high to a grasshopper", "This is a hyperbolic expression meaning very young, as in I haven't seen him since he was knee-high to a grasshopper."},
     {true,"Happy as a lark", "This is someone or something that is very happy and carefree."},
