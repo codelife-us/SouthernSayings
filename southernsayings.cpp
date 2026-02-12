@@ -150,7 +150,7 @@ const vector<Saying> southernSayings = {
     {true,"Quit bein' ugly", "This has nothing to do with looks - stop being mean, rude, or acting uncouth"},
     {true,"That doesn't amount to a hill of beans", "Something of little importance or value"},
     {true,"Lord willing and if the creeks don't rise", "A phrase that means if everything goes according to plan and likely originated from early 19th century travelers who had to cross creeks"},
-    {true,"He's silly as all get out", "Utmost silliness"},
+    {true,"He's silly as all get-out", "Utmost silliness. Get-out is used in other ways in the South to mean for the utmost conceivable degree"},
     {true,"If I had my druthers", "If I had my choice"},
     {true,"I'm finer than frog hair and not half as slick", "A funny response to 'How are you?'"},
     {true,"Don't try to plow through the stump", "Farm wisdom about choosing the wiser path instead of the hardest one"},
