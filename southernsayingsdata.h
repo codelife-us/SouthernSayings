@@ -430,4 +430,10 @@ const std::vector<Saying> southernSayings = {
     {true,"No bigger than a minnow in a fishing pond","Something disappointingly small"},
     // added 2/12/2026
     {true,"I love you a bushel and a peck and a hug around the neck", "Quintessential, endearing Southernism used by parents and grandparents to children and loved ones"},
-};
+    {false,"It’s hotter than two rabbits screwin’ in a wool sock!", "Extremely hot weather"},
+    {true,"You’re gonna have old and new-monia dressed like that!", "Scantily clad or inappropriate clothing"},
+    {false,"He couldn’t find his ass with both hands in his back pockets","Someone who is completely clueless or incompetent in a given situation. \"And a flashlight\" may be added for a higher level."},
+    {true,"Having a duck fit","Throwing a tantrum or having an emotional outburst at a higher level than a hissy fit"},
+    {true,"Sweet as tea and sharp as vinegar","Someone who is kind and pleasant but also has a sharp or keen mind"},
+    {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"}
+}; 
