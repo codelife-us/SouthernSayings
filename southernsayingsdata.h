@@ -364,7 +364,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Two shakes of a lamb's tail", "Very quickly"},
     {true,"That's the way the cookie crumbles", "That's just how things happen"},
     {true,"Dead as a doornail", "Completely dead"},
-    {false,"Grinnin' like a jackass eatin' briars", "Smiling widely, often in a silly or smug way"},
+    {true,"He's got a burr in his saddle", "He's irritated or annoyed"},
     {true,"In a coon's age", "In a very long time"},
     {true,"Gooder than grits", "Very good or excellent"},
     {false,"Don't make me open up a can of whoop-ass", "Don't provoke me to fight or punish you."},
