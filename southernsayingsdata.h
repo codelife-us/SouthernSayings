@@ -118,7 +118,7 @@ const std::vector<Saying> southernSayings = {
     {true,"You can catch more flies with honey than with vinegar", "A proverb about the power of persuasion sometimes used when someone is being 'ugly' in the southern sense"},
     {true,"She thinks she's so high falutin'", "Very pretentious"},
     {true,"Coke", "Not just referring to the soft drink but any carbonated soda"},
-    {true,"Too big for his britches", "Someone obviously full of themselves"},
+    {true,"Too big for his britches", "Someone obviously full of himself"},
     {true,"Blowin' up a storm", "You may hear a Southerner say this when the wind picks up and the skies get cloudy."},
     {true,"I'm so full, I'm about to pop", "What you might hear from a Southerner after a hearty meal"},
     {true,"Y'all", "a common Southern phrase as you and all squished together - but don't confuse it with \"all y'all\" which is a group larger than two people"},
