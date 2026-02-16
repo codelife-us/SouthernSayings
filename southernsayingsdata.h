@@ -119,7 +119,7 @@ const std::vector<Saying> southernSayings = {
     {true,"She thinks she's so high falutin'", "Very pretentious"},
     {true,"Coke", "Not just referring to the soft drink but any carbonated soda"},
     {true,"Too big for his britches", "Someone obviously full of himself"},
-    {true,"Blowin' up a storm", "Southerners say this when the wind picks up and the skies get cloudy"},
+    {true,"Blowin' up a storm", "You may hear a Southerner say this when the wind picks up and the skies get cloudy."},
     {true,"I'm so full, I'm about to pop", "What you might hear from a Southerner after a hearty meal"},
     {true,"Y'all", "a common Southern phrase as you and all squished together - but don't confuse it with \"all y'all\" which is a group larger than two people"},
     {true,"He thinks the sun comes up just to hear him crow.", "Conceited"},
@@ -435,5 +435,6 @@ const std::vector<Saying> southernSayings = {
     {false,"He couldn’t find his ass with both hands in his back pockets","Someone who is completely clueless or incompetent in a given situation. \"And a flashlight\" may be added for a higher level."},
     {true,"Having a duck fit","Throwing a tantrum or having an emotional outburst at a higher level than a hissy fit"},
     {true,"Sweet as tea and sharp as vinegar","Someone who is kind and pleasant but also has a sharp or keen mind"},
-    {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"}
+    {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"},
+    {true,"Larrupin' good","Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'"}
 }; 
