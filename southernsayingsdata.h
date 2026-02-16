@@ -146,7 +146,7 @@ const std::vector<Saying> southernSayings = {
     {true,"You can't make a silk purse out of a sow's ear", "No matter how hard you try, you just can't make something pretty out of something ugly."},
     {true,"It's raining cats and dogs!", "This means that it's a downpour and not that kittens and puppies are literally falling from the sky."},
     {true,"Aren't you precious?", "Likely full of sarcasm, unless directed toward an adorable child"},
-    {true,"You're barking up the wrong tree.", "When you're very much in the wrong, you might hear this phrase. Another way this can be used is if someone is telling you to back off."},
+    {true,"You're barking up the wrong tree", "When you're very much in the wrong, you might hear this phrase. Another way this can be used is if someone is telling you to back off."},
     {true,"Hold your horses.", "This means to stop what you're doing, or to calm down."},
     {true,"Who licked the red off your candy?", "asked when there is a wondering why the person is so upset"},
     {true,"My eyeballs are floating!", "When you want to express just how badly you need the restroom, but you don't want to say it, use this phrase instead!"},
