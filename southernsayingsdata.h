@@ -150,7 +150,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Hold your horses", "to wait, slow down, or be patient before taking action"},
     {true,"Who licked the red off your candy?", "asked when there is a wondering why the person is so upset"},
     {true,"My eyeballs are floating!", "When you want to express just how badly you need the restroom, but you don't want to say it, use this phrase instead!"},
-    {true,"She's madder than a wet hen.", "Someone is very angry and may need some time to cool down."},
+    {true,"She's madder than a wet hen", "Someone is very angry and may need some time to cool down"},
     {false,"I been running all over hell's half acre.", "When your day has ended up with the Southerner going to many more places than he originally wanted or planned, you might hear this."},
     {true,"She's got a mind like a steel trap, but it's rusted shut", "Intelligence doesn't matter if you're unwilling to use it"},
     {false,"She's busier than a cat covering poop on a marble floor", "Don't mistake motion for progress"},
