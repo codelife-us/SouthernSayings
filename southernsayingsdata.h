@@ -185,7 +185,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Fit as a fiddle", "In good health and spirits"},
     {true,"Knee-high to a grasshopper", "This is a hyperbolic expression meaning very young, as in I haven't seen him since he was knee-high to a grasshopper."},
     {true,"Happy as a lark", "This is someone or something that is very happy and carefree."},
-    {false,"Drunker than Cooter Brown", "This was a real person who lived along the Mason-Dixon line during the civil war. As the years went by, Cooter Brown's reputation grew, and his name became synonymous with someone who was always inebriated."},
+    {false,"Drunker than Cooter Brown", "He was a real person who lived along the Mason-Dixon line during the civil war. As years went by and the reputation grew, his name became synonymous with someone who was always inebriated."},
     {true,"Clean as a whistle", "Someone who is innocent or something is entirely clean and dirt-free, judging from its appearance"},
     {true,"Scarce as hen's teeth", "This is something very rare or difficult to find. Hens do not have teeth."},
     {true,"She's got more nerve than Carter's got liver pills", "Carters Products started as a pill-peddling company in the 19th century. Carters repped its \"Little Liver Pills\" so hard a Southern saying spawned from the advertisements. Alas, the Federal Trade Commission forced the drug-group to drop the \"liver\" portion of the ad, claiming it was deceptive. They became \"Carter's Little Pills\" in 1951. The phrase stuck but sometimes you hear the phrase without liver in it."},
