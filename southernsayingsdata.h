@@ -225,7 +225,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Hold your own", "To maintain one's position or status"},
     {true,"In a New York minute", "Very quickly or suddenly"},
     {true,"Like a chicken on a junebug", "Very eager or enthusiastic about something"},
-    {true,"They fell out of the ugly tree and hit every branch on the way down.", "Unattractive or very ill behaved"},
+    {true,"Fell out of the ugly tree and hit every branch on the way down", "Unattractive or very ill behaved"},
     {true,"It's like putting lipstick on a pig", "Superficial or cosmetic changes won't make something better, or different than what it is."},
     {true,"What in the Sam Hill?", "An expression of surprise or disbelief"},
     {true,"I'll tell you how the cow ate the cabbage", "I'm about (fixin') to tell you like it is"},
