@@ -436,5 +436,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Having a duck fit","Throwing a tantrum or having an emotional outburst at a higher level than a hissy fit"},
     {true,"Sweet as tea and sharp as vinegar","Someone who is kind and pleasant but also has a sharp or keen mind"},
     {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"},
-    {true,"Larrupin' good","Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'"}
+    {true,"Larrupin' good","Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'"},
+    // added 2/21/2026
+    {true,"Wooly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"}
 }; 
