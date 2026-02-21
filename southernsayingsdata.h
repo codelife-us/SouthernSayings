@@ -438,5 +438,5 @@ const std::vector<Saying> southernSayings = {
     {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"},
     {true,"Larrupin' good","Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'"},
     // added 2/21/2026
-    {true,"Wooly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"}
+    {true,"Woolly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"}
 }; 
