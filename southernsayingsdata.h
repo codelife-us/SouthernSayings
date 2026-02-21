@@ -278,7 +278,7 @@ const std::vector<Saying> southernSayings = {
     {true,"She's catty-cornered to common sense", "Lacks logic or is acting irrationally"},
     {true,"Happy as a dead pig in the sunshine", "Content or satisfied, often used sarcastically"},
     {true,"Lit up like a Christmas tree", "Extremely excited or overly decorated"},
-    {true,"Full of beans or full of baloney", "Full of nonsense. You might also hear, \"Don't believe him; he's full of baloney\" or that's a load of baloney\""},
+    {true,"Full of beans or full of baloney", "Full of nonsense. You might also hear, \"Don't believe him; he's full of baloney\" or that's a load of baloney"},
     {true,"Old as dirt", "Very old"},
     {false,"Ain't got a pot to piss in", "Very poor"},
     {true,"Wound up tighter than a two-dollar watch", "Extremely tense or stressed"},
