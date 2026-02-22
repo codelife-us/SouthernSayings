@@ -375,7 +375,7 @@ const std::vector<Saying> southernSayings = {
     {true,"You don't say!", "Expression of surprise or interest"},
     {true,"He's mule-stubborn and twice as ornery","Not only stubborn but also very difficult to deal with"},
     {true,"Land o' Goshen!", "Expression of surprise. Goshen was the region in Egypt inhabited by the Israelites until the Exodus in the Bible."},
-    {true,"My stars!", "Expression of surprise"},
+    {true,"It's hot enough to pop corn on the stalk", "A humorous exaggeration describing extremely hot weather so intense it affects crops in the field"},
     {true,"Fiddlesticks!", "Mild exclamation of annoyance"},
     {true,"Well, shut my mouth!", "Expression of surprise or disbelief"},
     {true,"Heavens above!", "Expression of surprise or exasperation"},
