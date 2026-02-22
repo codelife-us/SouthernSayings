@@ -35,7 +35,7 @@ const std::vector<Saying> southernSayings = {
     {true,"If work was a fire, he'd freeze to death", "A jab at someone who avoids work at all costs"},
     {true,"Got a Ph.D. in doing nothing", "Humorous way to label someone professionally lazy"},
     {true,"Lazier than a toad on a lily pad", "Slow and stationary, just soaking up life"},
-    {true,"He's a few fries short of a Happy Meal", "Not very bright or lacking common sense"},
+    {true,"He doesn't know come from sic 'em", "Completely clueless or lacking basic common sense"},
     {true,"If brains were leather, he wouldn't have enough to saddle a June bug", "Extremely unintelligent"},
     {true,"The porch light's on, but nobody's home", "Someone looks alert but isn't really mentally present"},
     {true,"Sharp as a mashed potato sandwich", "A humorous insult for someone lacking intellect"},
