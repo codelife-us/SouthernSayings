@@ -408,7 +408,7 @@ const std::vector<Saying> southernSayings = {
     {false,"She's got more curves than a country road", "Attractive and curvy figure as a compliment"},
     {true,"Scared as a cat at a dog pound", "Nervous, frightened, or anxious"},
     {true,"Makes a pressure cooker look calm","Nervous, anxious, or under a lot of stress"},
-    {true,"She could talk a coon right out of a tree", "Talkative"},
+    {true,"She could talk a coon right out of a tree", "Talkative with influence"},
     {true,"Well, I'll be a monkey's uncle!", "Expression of great surprise"},
     {true,"Put a little paint on the barn", "Needs makeup applied"},
     {true,"Busier than a cow's tail in fly season", "Extremely busy or active"},
