@@ -418,7 +418,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Take a gander", "Look at something"},
     {true,"Jump the broomstick", "Get married"},
     // added 2/9/2026
-    {true,"As popular as a pole cat in a perfume factory", "someone is extremely unwelcome or highly disliked"},
+    {true,"As popular as a pole cat in a perfume factory", "Someone who is extremely unwelcome or highly disliked"},
     {true,"Were you raised in a barn?", "Close the door / You have no manners"},
     // added 2/10/2026
     {true,"Bet your boots","Absolutely certain"},
