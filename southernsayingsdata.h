@@ -66,7 +66,7 @@ const std::vector<Saying> southernSayings = {
     {true,"More tricks than a squirrel in a corn crib", "Someone who's clever or sneaky"},
     {true,"Runnin' around like a chicken with its head cut off", "Acting frantic or disorganized in an inefficient way"},
     {true,"Between a rock and a hard place", "Stuck in a situation where there are no good choices"},
-    {true,"If it were raining soup, I'd get hit with a fork.", "Nothing ever goes right for this person"},
+    {true,"If it were raining soup, I'd get hit with a fork", "Nothing ever goes right for this person"},
     {true,"Tougher than a two-dollar steak", "Describes something or someone extremely resilient or hard to handle"},
     {true,"I'm hanging on by a thread", "Barely managing to hold it together - mentally, emotionally, or financially"},
     {true,"This ain't my first rodeo", "A way to say you've been through hard times before or done this enough to be familiar with it"},
