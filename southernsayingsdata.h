@@ -438,5 +438,8 @@ const std::vector<Saying> southernSayings = {
     {true,"Don't go airing your dirty laundry in public","Don't reveal private matters or personal issues in front of others"},
     {true,"Larrupin' good","Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'"},
     // added 2/21/2026
-    {true,"Woolly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"}
+    {true,"Woolly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"},
+    // added 2/26/2026
+    {true, "Rurnt","Really spoiled, broken, or beyond saving, whether it’s food, a situation, or someone's manners"},
+    {true,"Scat cat","Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \"your tail's on fire\" added on."}
 }; 
