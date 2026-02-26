@@ -56,7 +56,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Got more baggage than Atlanta airport", "Someone who comes with a lot of emotional history and drama"},
     {false,"Shacking up", "Living together without being married"},
     {true,"Nervous as a long-tailed cat in a room full of rocking chairs", "Extremely anxious or jumpy"},
-    {true,"Happy as a pig in slop", "Completely content and satisfied"},
+    {true,"Happy as a pig in slop", "To be extremely content and satisfied"},
     {true,"Busy as a one-legged cat in a sandbox", "Overwhelmed or trying hard to manage a lot."},
     {true,"Crooked as a dog's hind leg", "Refers to someone dishonest or shady"},
     {true,"Uglier than a mud fence after a rainstorm", "A brutal way to call someone unattractive"},
