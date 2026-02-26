@@ -24,7 +24,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Fixin' to", "This person is about to do something."},
     {true,"Lower than a snake's belly in a ditch", "Refers to someone with no moral backbone"},
     {true,"Got a face for radio", "A backhanded way of saying someone isn't very photogenic"},
-    {true,"Crazier than a sprayed roach", "Someone acting wildly or irrationally - also you may hear 'crazier than a betsy bug'"},
+    {true,"Crazier than a sprayed roach", "Someone acting wildly or irrationally - Or: Crazier than a bed/bessie/betsy/june bug"},
     {true,"Lazy as a hound dog on a porch swing", "Extremely lazy and content to stay idle"},
     {true,"Wouldn't hit a lick at a snake", "Describes someone who won't even make a slight effort"},
     {true,"Too lazy to scratch an itch", "Someone who refuses to do even basic tasks"},
