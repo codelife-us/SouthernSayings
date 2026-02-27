@@ -121,7 +121,7 @@ const std::vector<Saying> southernSayings = {
     {true,"Too big for his britches", "Someone obviously full of himself"},
     {true,"Blowin' up a storm", "You may hear a Southerner say this when the wind picks up and the skies get cloudy."},
     {true,"I'm so full, I'm about to pop", "What you might hear from a Southerner after a hearty meal"},
-    {true,"Y'all", "a common Southern phrase as you and all squished together - but don't confuse it with \"all y'all\" which is a group larger than two people"},
+    {true,"Y'all", "Common Southern contraction of you and all. \"All y'all\" is a group or more than two people"},
     {true,"He thinks the sun comes up just to hear him crow.", "Conceited"},
     {true,"Til the cows come home", "Cows tend to take their time, so this means it could be all day or a long time at least"},
     {true,"Doohickey", "When a Southerner can't think of a particular name for something, it suddenly becomes a doohickey."},
