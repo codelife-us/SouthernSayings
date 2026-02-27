@@ -106,7 +106,7 @@ const std::vector<Saying> southernSayings = {
     {true,"What's got you all cattywampus?", "Askew, disordered, or crooked"},
     {true,"He was three sheets to the wind", "He was intoxicated"},
     {true,"It's over yonder", "A general direction, not a specific place, and it might not be within reach but generally within sight"},
-    {true,"He's having a hissy fit", "An adult having a full melt down and emotional outburst"},
+    {true,"Hissy fit", "Sudden and childish outburst of anger or frustration and applied to adults for a humorous edge"},
     {true,"Quit bein' ugly", "This has nothing to do with looks - stop being mean, rude, or acting uncouth"},
     {true,"That doesn't amount to a hill of beans", "Something of little importance or value"},
     {true,"Lord willing and if the creeks don't rise", "A phrase that means if everything goes according to plan and likely originated from early 19th century travelers who had to cross creeks"},
