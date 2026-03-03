@@ -441,5 +441,9 @@ const std::vector<Saying> southernSayings = {
     {true,"Woolly booger","A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar"},
     // added 2/26/2026
     {true, "Rurnt","Really spoiled, broken, or beyond saving, whether it’s food, a situation, or someone's manners"},
-    {true,"Scat cat","Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \"your tail's on fire\" added on."}
+    {true,"Scat cat","Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \"your tail's on fire\" added on."},
+    // added 3/3/2026
+    {true,"She's hot as a two-dollar pistol","Extremely attractive"},
+    {true,"We go together like country ham and red-eye gravy","Close relationship or bond"},
+    {true,"As sure as the vine twines around the stump, you're my darling sugar lump","Sweet phrase of affection"}
 }; 
