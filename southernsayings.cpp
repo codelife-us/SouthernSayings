@@ -26,7 +26,7 @@
 //     version 1.5 - 2/7/2026 - new option --polite to exclude sayings that aren't suitable for polite company
 //     version 1.6 - 2/10 - 2/11/2026 - new option and sayings added
 //     version 1.7 - 2/12/2026 - moved data into a separate header file and added more sayings
-//
+//     version 1.8 - 3/4/2026 - added categories and category filtering
 
 #include <array>
 #include <string>
@@ -39,13 +39,59 @@
 
 using namespace std;
 
-void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false) {
+string categoryToString(Category cat) {
+    switch (cat) {
+        case Category::advice: return "advice";
+        case Category::appearance: return "appearance";
+        case Category::emotions: return "emotions";
+        case Category::expressions: return "expressions";
+        case Category::family: return "family";
+        case Category::food: return "food";
+        case Category::intelligence: return "intelligence";
+        case Category::laziness: return "laziness";
+        case Category::relationships: return "relationships";
+        case Category::money: return "money";
+        case Category::personality: return "personality";
+        case Category::surprise: return "surprise";
+        case Category::weather: return "weather";
+        case Category::work: return "work";
+        case Category::general: return "general";
+        default: return "unknown";
+    }
+}
+
+bool stringToCategory(const string& str, Category& cat) {
+    if (str == "advice") cat = Category::advice;
+    else if (str == "appearance") cat = Category::appearance;
+    else if (str == "emotions") cat = Category::emotions;
+    else if (str == "expressions") cat = Category::expressions;
+    else if (str == "family") cat = Category::family;
+    else if (str == "food") cat = Category::food;
+    else if (str == "intelligence") cat = Category::intelligence;
+    else if (str == "laziness") cat = Category::laziness;
+    else if (str == "relationships") cat = Category::relationships;
+    else if (str == "money") cat = Category::money;
+    else if (str == "personality") cat = Category::personality;
+    else if (str == "surprise") cat = Category::surprise;
+    else if (str == "weather") cat = Category::weather;
+    else if (str == "work") cat = Category::work;
+    else if (str == "general") cat = Category::general;
+    else return false;
+    return true;
+}
+
+void outputSaying(const Saying& saying, int sayingIndex, bool separateLines = false, bool colored = false, bool noMeaning = false, bool showNumber = false, bool showCategory = false) {
     string sayingColor = "\033[35m";  // pink
     string meaningColor = "\033[33m"; // orange
+    string categoryColor = "\033[36m"; // cyan
     string resetColor = "\033[0m";    // no color
     string label = showNumber ? "[" + to_string(sayingIndex + 1) + "] " : "";
     if (!colored) {
-        sayingColor = meaningColor = resetColor = "";
+        sayingColor = meaningColor = categoryColor = resetColor = "";
+    }
+    string categoryStr = showCategory ? categoryToString(saying.category) : "";
+    if (showCategory && !categoryStr.empty()) {
+        cout << categoryColor << categoryStr << resetColor << "\n";
     }
     if (noMeaning) {
         cout << label << sayingColor << saying.text << resetColor << "\n";
@@ -65,18 +111,22 @@ void displayHelp() {
     cout << "Southern Sayings - A collection of Southern sayings with their meanings\n\n";
     cout << "Usage: ./southernsayings [OPTIONS]\n\n";
     cout << "Options:\n";
-    cout << "  (none)               Display a single random saying (default)\n";
-    cout << "  -a, --all            Display all sayings in shuffled order\n";
-    cout << "  -1, --oneline        Display saying and meaning on one line with colon separator\n";
-    cout << "  -c, --color          Colored output: pink for saying, orange for meaning\n";
-    cout << "  -nm, --nomeaning     Display only the saying without the meaning\n";
-    cout << "  -sn, --shownumber    Display the unique saying number in brackets\n";
-    cout << "  -p, --pick [number]  Display a specific saying by number\n";
-    cout << "      --polite         Display only sayings suitable for polite company\n";
-    cout << "  -j, --json           Output all sayings in JSON format\n";
-    cout << "  --csv                Output all sayings in CSV format\n";
-    cout << "      --appinfo        Display links to the app version\n";
-    cout << "  -h, --help           Display this help message\n";
+    cout << "  (none)                Display a single random saying (default)\n";
+    cout << "  -a, --all             Display all sayings in shuffled order\n";
+    cout << "  -1, --oneline         Display saying and meaning on one line with colon separator\n";
+    cout << "  -c, --color           Colored output: pink for saying, orange for meaning\n";
+    cout << "  -nm, --nomeaning      Display only the saying without the meaning\n";
+    cout << "  -sn, --shownumber     Display the unique saying number in brackets\n";
+    cout << "  -p, --pick [number]   Display a specific saying by number\n";
+    cout << "      --polite          Display only sayings suitable for polite company\n";
+    cout << "      --showcategory    Display the category before the saying\n";
+    cout << "      --category [name] Filter by category (advice, appearance, emotions, expressions,\n";
+    cout << "                        family, food, intelligence, laziness, relationships, money,\n";
+    cout << "                        personality, surprise, weather, work, general)\n";
+    cout << "  -j, --json            Output all sayings in JSON format\n";
+    cout << "  --csv                 Output all sayings in CSV format\n";
+    cout << "      --appinfo         Display links to the app version\n";
+    cout << "  -h, --help            Display this help message\n";
 }
 
 // Helper to escape characters for JSON output
@@ -112,6 +162,9 @@ int main(int argc, char* argv[]) {
     bool impoliteOnly = false; // unadvertised option
     bool jsonOutput = false, csvOutput = false;
     bool appInfo = false; // show links to app version
+    bool filterByCategory = false;
+    bool showCategory = false;
+    Category categoryFilter = Category::general;
     int pickedNumber = -1;
 
     for (int i = 1; i < argc; i++) {
@@ -123,10 +176,23 @@ int main(int argc, char* argv[]) {
         else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
         else if (arg == "--polite") politeOnly = true;
         else if (arg == "--impolite") impoliteOnly = true;
+        else if (arg == "--showcategory") showCategory = true;
         else if (arg == "--appinfo") appInfo = true;
         else if (arg == "-j" || arg == "--json") jsonOutput = true;
         else if (arg == "--csv") csvOutput = true;
-        else if (arg == "-p" || arg == "--pick") {
+        else if (arg == "--category") {
+            if (i + 1 < argc) {
+                if (stringToCategory(argv[++i], categoryFilter)) {
+                    filterByCategory = true;
+                } else {
+                    cerr << "Error: Invalid category name.\n";
+                    return 1;
+                }
+            } else {
+                cerr << "Error: --category requires a category name.\n";
+                return 1;
+            }
+        } else if (arg == "-p" || arg == "--pick") {
             if (i + 1 < argc) {
                 try {
                     pickedNumber = stoi(argv[++i]);
@@ -154,16 +220,22 @@ int main(int argc, char* argv[]) {
         cerr << "It is impossible to be polite and impolite at the same time.\n";
         return 1;
     }
-    // Create filtered list of indices based on politeOnly flag
+    // Create filtered list of indices based on politeOnly and category flags
     vector<int> availableIndices;
     for (size_t i = 0; i < southernSayings.size(); ++i) {
         if (impoliteOnly) {
             if (!southernSayings[i].okForPoliteCompany) {
+                if (filterByCategory && southernSayings[i].category != categoryFilter) {
+                    continue;
+                }
                 availableIndices.push_back(i);
             }
             continue;
         }
         else if (!politeOnly || southernSayings[i].okForPoliteCompany) {
+            if (filterByCategory && southernSayings[i].category != categoryFilter) {
+                continue;
+            }
             availableIndices.push_back(i);
         }
     }
@@ -176,7 +248,8 @@ int main(int argc, char* argv[]) {
             cout << "  {\n";
             cout << "    \"polite\": " << (southernSayings[idx].okForPoliteCompany ? "true" : "false" ) << ",\n";
             cout << "    \"text\": \"" << escapeJSON(southernSayings[idx].text) << "\",\n";
-            cout << "    \"meaning\": \"" << escapeJSON(southernSayings[idx].meaning) << "\"\n";
+            cout << "    \"meaning\": \"" << escapeJSON(southernSayings[idx].meaning) << "\",\n";
+            cout << "    \"category\": \"" << categoryToString(southernSayings[idx].category) << "\"\n";
             cout << "  }" << (i < availableIndices.size() - 1 ? "," : "") << "\n";
         }
         cout << "]\n";
@@ -185,9 +258,9 @@ int main(int argc, char* argv[]) {
 
     // Handle CSV output
     if (csvOutput) {
-        cout << "Polite,Text,Meaning\n";
+        cout << "Polite,Text,Meaning,Category\n";
         for (int idx : availableIndices) {
-            cout << (southernSayings[idx].okForPoliteCompany ? "Yes" : "No") << "," << escapeCSV(southernSayings[idx].text) << "," << escapeCSV(southernSayings[idx].meaning) << "\n";
+            cout << (southernSayings[idx].okForPoliteCompany ? "Yes" : "No") << "," << escapeCSV(southernSayings[idx].text) << "," << escapeCSV(southernSayings[idx].meaning) << "," << categoryToString(southernSayings[idx].category) << "\n";
         }
         return 0;
     }
@@ -203,7 +276,7 @@ int main(int argc, char* argv[]) {
         shuffle(originalIndices.begin(), originalIndices.end(), gen);
 
         for (int idx : originalIndices) {
-            outputSaying(southernSayings[idx], idx, separateLines, colored, noMeaning, showNumber);
+            outputSaying(southernSayings[idx], idx, separateLines, colored, noMeaning, showNumber, showCategory);
         }
         cout << "\nTotal sayings: " << availableIndices.size() << "\n";
     } else if (pickSpecific) {
@@ -211,7 +284,7 @@ int main(int argc, char* argv[]) {
             int idx = pickedNumber - 1;
             // Check if this saying is available (not filtered out by politeOnly)
             if (find(availableIndices.begin(), availableIndices.end(), idx) != availableIndices.end()) {
-                outputSaying(southernSayings[idx], idx, separateLines, colored, noMeaning, showNumber);
+                outputSaying(southernSayings[idx], idx, separateLines, colored, noMeaning, showNumber, showCategory);
             } else {
                 cerr << "Error: Saying #" << pickedNumber << " is not available with --polite filter\n";
                 return 1;
@@ -229,7 +302,7 @@ int main(int argc, char* argv[]) {
         mt19937 gen(rd());
         uniform_int_distribution<> dis(0, availableIndices.size() - 1);
         int randomIdx = availableIndices[dis(gen)];
-        outputSaying(southernSayings[randomIdx], randomIdx, separateLines, colored, noMeaning, showNumber);
+        outputSaying(southernSayings[randomIdx], randomIdx, separateLines, colored, noMeaning, showNumber, showCategory);
     }
     return 0;
 }
