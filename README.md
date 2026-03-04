@@ -35,6 +35,8 @@ g++ southernsayings.cpp -o southernsayings
 - `-c, --color` - Colored output: pink for saying, orange for meaning
 - `-nm, --nomeaning` - Display only the saying without the meaning
 - `     --polite` - Display only polite sayings
+- `     --showcategory` - Display the category before the saying
+- `     --category [name]` - Filter by category (advice, appearance, emotions, expressions,                                       family, food, intelligence, laziness, relationships, money)
 - `-p, --pick [number]` - Display a specific saying by number
 - `-sn, --shownumber` - Display the unique saying number in brackets
 - `-j, --json` - Output the full collection in JSON format
@@ -54,8 +56,8 @@ g++ southernsayings.cpp -o southernsayings
 ./southernsayings -a --color -1
 # Display one random saying without the meaning and show the number
 ./southernsayings -nm -sn
-# Display only polite sayings
-./Southernsayings -a --polite
+# Display only polite sayings and show categories
+./Southernsayings -a --polite --showcategory
 # Get help
 ./southernsayings -h
 ```
@@ -69,6 +71,7 @@ g++ southernsayings.cpp -o southernsayings
 - Automatic shuffling of sayings
 - Output to JSON or CSV
 - Polite filter can be used to show only for polite company
+- Filter on category and optional display of category
 - Helpful command-line interface with built-in help
 
 ## License
