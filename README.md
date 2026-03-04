@@ -57,7 +57,7 @@ g++ southernsayings.cpp -o southernsayings
 # Display one random saying without the meaning and show the number
 ./southernsayings -nm -sn
 # Display only polite sayings and show categories
-./Southernsayings -a --polite --showcategory
+./southernsayings -a --polite --showcategory
 # Get help
 ./southernsayings -h
 ```
