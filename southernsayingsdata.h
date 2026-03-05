@@ -143,7 +143,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Too big for his britches", "Someone obviously full of himself", Category::personality},
     {true, "Blowin' up a storm", "Southerners say this when the wind picks up and the skies get cloudy", Category::weather},
     {true, "I'm so full, I'm about to pop", "What you might hear from a Southerner after a hearty meal - also full as a tick may be used", Category::food},
-    {true, "Y'all", "This is a common Southern contraction of you and all used in addressing two or more persons. \\\"All y'all\\\" is used for more than two.", Category::expressions},
+    {true, "Y'all", "This is a common Southern contraction of you and all used in addressing two or more persons. \"All y'all\" is used for more than two.", Category::expressions},
     {true, "He thinks the sun comes up just to hear him crow", "Conceited", Category::personality},
     {true, "Til the cows come home", "Cows tend to take their time, so this means it could be all day or a long time at least", Category::expressions},
     {true, "Doohickey", "When a Southerner can't think of a particular name for something, it suddenly becomes a doohickey.", Category::expressions},
@@ -284,7 +284,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Stove up", "Sore or stiff", Category::expressions},
     {true, "Ruckus", "A commotion", Category::expressions},
     {true, "There's not a pot too crooked that a lid won't fit", "Southern positivity is expressed well with this one and means there's someone out there for everyone", Category::relationships},
-    {true, "We're so poor, we can't afford to pay attention", "Southern way of expressing being very poor and often combined with \\\"when I was growing up\\\"", Category::money},
+    {true, "We're so poor, we can't afford to pay attention", "Southern way of expressing being very poor and often combined with \"when I was growing up\"", Category::money},
     {true, "Yes ma'am or yessir", "While these are only good manners, Southerners say this often", Category::expressions},
     {true, "Sho nuff", "Sure enough", Category::expressions},
     {true, "Close the door! You're letting all the good air out.", "Air conditioning is so valued in the South, and if you leave the door open too long, you will hear about it!", Category::weather},
@@ -300,7 +300,7 @@ const std::vector<Saying> southernSayings = {
     {true, "She's catty-cornered to common sense", "Lacks logic or is acting irrationally", Category::intelligence},
     {true, "Happy as a dead pig in the sunshine", "Content or satisfied, often used sarcastically", Category::emotions},
     {true, "Lit up like a Christmas tree", "Extremely excited or overly decorated", Category::emotions},
-    {true, "Full of beans or full of baloney", "Full of nonsense. You might also hear, \\\"Don't believe him; he's full of baloney\\\" or that's a load of baloney", Category::expressions},
+    {true, "Full of beans or full of baloney", "Full of nonsense. You might also hear, \"Don't believe him; he's full of baloney\" or that's a load of baloney", Category::expressions},
     {true, "Old as dirt", "Very old", Category::expressions},
     {false, "Ain't got a pot to piss in", "Very poor", Category::money},
     {true, "Wound up tighter than a two-dollar watch", "Extremely tense or stressed", Category::emotions},
@@ -454,14 +454,12 @@ const std::vector<Saying> southernSayings = {
     {true, "Larapin' good", "Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'", Category::food},
     {true, "Woolly booger", "A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar", Category::general},
     {true, "Rurnt", "Really spoiled, broken, or beyond saving, whether it's food, a situation, or someone's manners", Category::expressions},
-    {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \\\"your tail's on fire\\\" added on.", Category::expressions},
+    {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \"your tail's on fire\" added on.", Category::expressions},
     {true, "She's hot as a two-dollar pistol", "Extremely attractive", Category::relationships},
     {true, "We go together like country ham and red-eye gravy", "Close relationship or bond", Category::relationships},
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
     {true, "Aight", "All right", Category::expressions }
 };
-
-
 
 
 
