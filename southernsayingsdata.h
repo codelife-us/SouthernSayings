@@ -457,6 +457,8 @@ const std::vector<Saying> southernSayings = {
     {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \\\"get your tail out of the gravy\\\" or \\\"your tail's on fire\\\" added on.", Category::expressions},
     {true, "She's hot as a two-dollar pistol", "Extremely attractive", Category::relationships},
     {true, "We go together like country ham and red-eye gravy", "Close relationship or bond", Category::relationships},
+    {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "", Category::relationships},
     {true, "Aight", "All right", Category::expressions }
 };
+
 
