@@ -454,12 +454,13 @@ const std::vector<Saying> southernSayings = {
     {true, "Larapin' good", "Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'", Category::food},
     {true, "Woolly booger", "A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar", Category::general},
     {true, "Rurnt", "Really spoiled, broken, or beyond saving, whether it's food, a situation, or someone's manners", Category::expressions},
-    {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \\\"get your tail out of the gravy\\\" or \\\"your tail's on fire\\\" added on.", Category::expressions},
+    {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \\\"your tail's on fire\\\" added on.", Category::expressions},
     {true, "She's hot as a two-dollar pistol", "Extremely attractive", Category::relationships},
     {true, "We go together like country ham and red-eye gravy", "Close relationship or bond", Category::relationships},
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
     {true, "Aight", "All right", Category::expressions }
 };
+
 
 
 
