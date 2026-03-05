@@ -161,7 +161,7 @@ const std::vector<Saying> southernSayings = {
     {true, "It'll make ya wanna slap your mama", "Used to describe something that's so good that you might do something unthinkable or extreme as a result. It's often used to describe food that's insanely delicious.", Category::food},
     {true, "A rooster one day and a feather duster the next", "This is a Southerner's creative way of saying that you shouldn't crow like a rooster about your wealth and belonging today, because it could all disappear tomorrow.", Category::advice},
     {true, "He ain't got the sense God gave a goose", "This is another nice way to say that someone is lacking in brain power.", Category::intelligence},
-    {true, "Pretty is as pretty does", "Similar to the phrase \\\"quit being ugly,\\\" this one alludes to what's on the inside, not the outside, that matters. The expression is a simple reminder, often given to children, to remind them to be kind to others and mind their manners.", Category::advice},
+    {true, "Pretty is as pretty does", "Similar to the phrase \"quit being ugly,\" this one alludes to what's on the inside, not the outside, that matters. The expression is a simple reminder, often given to children, to remind them to be kind to others and mind their manners.", Category::advice},
     {true, "Can't never could", "This is positive thinking, Southern style.", Category::advice},
     {true, "Preachin' to the choir", "something to quit doing when trying to convince someone who already agrees with you", Category::expressions},
     {true, "It'll all come out in the wash", "Like dirt and stains, worries and problems will wash away. Whatever is bothering you isn't serious, and it will eventually be resolved with no lasting effects and that means don't worry.", Category::advice},
@@ -405,7 +405,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Got your ears lowered", "Got a haircut", Category::expressions},
     {true, "Haulin' tail", "Moving very fast or rushing", Category::expressions},
     {true, "Ain't right", "Something's off about that person", Category::expressions},
-    {true, "Holler at me", "Used in farewell saying like \\\"stay in touch\\\" or contact me when needed", Category::expressions},
+    {true, "Holler at me", "Used in farewell saying like \"stay in touch\" or contact me when needed", Category::expressions},
     {true, "Maters", "Tomatoes. Also, potatoes may be called taters, and sometimes a banana is called a nanner.", Category::food},
     {true, "If you want the rainbow, you gotta put up with the rain", "You have to endure difficulties to enjoy the good times", Category::advice},
     {true, "Ill as a hornet", "Very angry or upset", Category::emotions},
@@ -416,9 +416,9 @@ const std::vector<Saying> southernSayings = {
     {true, "He could talk the dogs off a meat truck", "Very persuasive and charming", Category::personality},
     {true, "Mess of catfish", "Fried catfish is a staple of Southern food. A mess is enough to feed your family.", Category::food},
     {false, "Wait just a cotton pickin' minute", "This is a mild expletive to add emphasis without using damn", Category::expressions},
-    {true, "Fer piece", "A significant distance - You might hear, \\\"Billy Bob's house is a fer piece. Git in the truck and I'll carry you there.\\\"", Category::expressions},
+    {true, "Fer piece", "A significant distance - You might hear, \"Billy Bob's house is a fer piece. Git in the truck and I'll carry you there.\"", Category::expressions},
     {true, "More than you can shake a stick at", "An expression meaning a large amount or number of something", Category::expressions},
-    {true, "What fer?", "Funny response to this is \\\"Cat fur, to make kitten britches.\\\"", Category::general},
+    {true, "What fer?", "Funny response to this is \"Cat fur, to make kitten britches.\"", Category::general},
     {true, "He may not be a chicken, but he has his henhouse ways", "Timid and cautious", Category::personality},
     {true, "He's riding a gravy train with biscuit wheels", "Lucky and comfortable", Category::expressions},
     {true, "He don't care what you call him as long as you call him to supper", "He loves to eat", Category::food},
@@ -460,6 +460,7 @@ const std::vector<Saying> southernSayings = {
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
     {true, "Aight", "All right", Category::expressions }
 };
+
 
 
 
