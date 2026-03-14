@@ -458,7 +458,8 @@ const std::vector<Saying> southernSayings = {
     {true, "She's hot as a two-dollar pistol", "Extremely attractive", Category::relationships},
     {true, "We go together like country ham and red-eye gravy", "Close relationship or bond", Category::relationships},
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
-    {true, "Aight", "All right", Category::expressions }
+    {true, "Aight", "All right", Category::expressions },
+    {true, "Get back to my rat killin'", "This is about getting back to work or attending to one's business. It is sometimes said as a polite way to end a conversation with a long winded person and typically by saying, \"Well, I'll let you get back to your rat killing,\"", Category::expressions }
 };
 
 
