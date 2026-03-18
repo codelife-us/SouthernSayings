@@ -132,7 +132,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Quit bein' ugly", "This has nothing to do with looks - stop being mean, rude, or acting uncouth", Category::advice},
     {true, "That doesn't amount to a hill of beans", "Something of little importance or value", Category::expressions},
     {true, "Lord willing and if the creeks don't rise", "A phrase that means if God approves the plan and hoping for no frustrating events along the way", Category::advice},
-    {true, "He's silly as all get-out", "Utmost silliness. Get-out is used in other ways in the South to mean for the utmost conceivable degree", Category::personality},
+    {true, "He's silly as all get-out", "Utmost silliness. Get-out is used in other ways in the South to mean to the utmost conceivable degree", Category::personality},
     {true, "If I had my druthers", "If I had my choice", Category::expressions},
     {true, "I'm finer than frog hair and not half as slick", "A funny response to 'How are you?'", Category::expressions},
     {true, "Don't try to plow through the stump", "Farm wisdom about choosing the wiser path instead of the hardest one", Category::advice},
