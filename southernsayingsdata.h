@@ -460,7 +460,10 @@ const std::vector<Saying> southernSayings = {
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
     {true, "Aight", "All right", Category::expressions },
     {true, "Get back to my rat killin'", "This is about getting back to work or attending to one's business. It is sometimes said as a polite way to end a conversation with a long winded person and typically by saying, \"Well, I'll let you get back to your rat killin'\"", Category::expressions },
-    {true, "The whole kit and caboodle", "All the parts or elements of something", Category::expressions }
+    {true, "The whole kit and caboodle", "All the parts or elements of something", Category::expressions },
+    {true, "Enough to choke a horse", "An excessive amount", Category::expressions},
+    {true, "Between you, me, and the fence post", "Hey, listen, but don't tell a soul about any of this", Category::expressions},
+    {true, "Sick as a dog", "Very ill", Category::expressions}
 };
 
 
