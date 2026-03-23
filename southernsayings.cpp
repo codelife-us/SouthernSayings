@@ -114,7 +114,8 @@ void displayHelp() {
     cout << "  (none)                Display a single random saying (default)\n";
     cout << "  -a, --all             Display all sayings in shuffled order\n";
     cout << "  -1, --oneline         Display saying and meaning on one line with colon separator\n";
-    cout << "  -c, --color           Colored output: pink for saying, orange for meaning\n";
+    cout << "  -c, --color           Colored output (default): pink for saying, orange for meaning\n";
+    cout << "  -nc, --nocolor        Disable colored output\n";
     cout << "  -nm, --nomeaning      Display only the saying without the meaning\n";
     cout << "  -sn, --shownumber     Display the unique saying number in brackets\n";
     cout << "  -p, --pick [number]   Display a specific saying by number\n";
@@ -157,7 +158,7 @@ string escapeCSV(const string& s) {
 }
 
 int main(int argc, char* argv[]) {
-    bool together = false, showAll = false, colored = false, noMeaning = false, showNumber = false, pickSpecific = false;
+    bool together = false, showAll = false, colored = true, noMeaning = false, showNumber = false, pickSpecific = false;
     bool politeOnly = false;
     bool impoliteOnly = false; // unadvertised option
     bool jsonOutput = false, csvOutput = false;
@@ -172,6 +173,7 @@ int main(int argc, char* argv[]) {
         if (arg == "-1" || arg == "--oneline") together = true;
         else if (arg == "-a" || arg == "--all") showAll = true;
         else if (arg == "-c" || arg == "--color") colored = true;
+        else if (arg == "-nc" || arg == "--nocolor") colored = false;
         else if (arg == "-nm" || arg == "--nomeaning") noMeaning = true;
         else if (arg == "-sn" || arg == "--shownumber") showNumber = true;
         else if (arg == "--polite") politeOnly = true;
