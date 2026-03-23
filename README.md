@@ -10,12 +10,14 @@ Southern Sayings is a command-line program that displays a curated collection of
 
 To compile the program, use the provided build task:
 
-
 For Mac
+
 ```bash
 clang++ southernsayings.cpp -o southernsayings
 ```
+
 For Linux
+
 ```bash
 g++ southernsayings.cpp -o southernsayings
 ```
@@ -29,14 +31,15 @@ g++ southernsayings.cpp -o southernsayings
 ### Options
 
 - `-h, --help` - Display this help message
-- *(none)* - Display one random saying
+- _(none)_ - Display one random saying
 - `-a, --all` - Display all sayings shuffled
 - `-1, --oneline` - Display saying and meaning on one line with colon separator
-- `-c, --color` - Colored output: pink for saying, orange for meaning
+- `-c, --color` - Colored output: pink for saying, orange for meaning (default)
+- `-nc, --nocolor` - Disable colored output
 - `-nm, --nomeaning` - Display only the saying without the meaning
 - `     --polite` - Display only polite sayings
 - `     --showcategory` - Display the category before the saying
-- `     --category [name]` - Filter by category (advice, appearance, emotions, expressions,                                       family, food, intelligence, laziness, relationships, money)
+- `     --category [name]` - Filter by category (advice, appearance, emotions, expressions, family, food, intelligence, laziness, relationships, money)
 - `-p, --pick [number]` - Display a specific saying by number
 - `-sn, --shownumber` - Display the unique saying number in brackets
 - `-j, --json` - Output the full collection in JSON format
@@ -50,10 +53,10 @@ g++ southernsayings.cpp -o southernsayings
 ./southernsayings
 # Display all sayings shuffled
 ./southernsayings -a
-# Display one random sayings in colors
-./southernsayings --color
-# Display all sayings shuffled with colors on one line
-./southernsayings -a --color -1
+# Display one random saying without colors
+./southernsayings --nocolor
+# Display all sayings shuffled without colors on one line
+./southernsayings -a -nc -1
 # Display one random saying without the meaning and show the number
 ./southernsayings -nm -sn
 # Display only polite sayings and show categories
@@ -66,7 +69,7 @@ g++ southernsayings.cpp -o southernsayings
 
 - 437 Southern sayings with meanings
 - Random selection or display all sayings
-- Colored output support (pink for sayings, orange for meanings)
+- Colored output by default (pink for sayings, orange for meanings), disable with `--nocolor`
 - Separate line formatting option for more compact format
 - Automatic shuffling of sayings
 - Output to JSON or CSV
