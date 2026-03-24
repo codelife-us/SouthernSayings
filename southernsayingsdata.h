@@ -365,7 +365,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Pocketbook", "Purse", Category::expressions},
     {true, "Supper", "Dinner", Category::food},
     {true, "Do what now?", "Excuse me? or What did you say?", Category::surprise},
-    {true, "How's your mama and them?", "How is your family? Sometimes mom 'n 'em", Category::family},
+    {true, "How's your mom 'n 'em?", "How is your family? Sometimes mom and them", Category::family},
     {true, "Lord have mercy!", "Expression of surprise or exasperation", Category::surprise},
     {true, "Bless it!", "Expression of sympathy or frustration", Category::surprise},
     {true, "Good night!", "Expression of surprise (not a goodbye)", Category::surprise},
