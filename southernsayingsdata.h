@@ -451,7 +451,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Having a duck fit", "This means throwing a tantrum or having an emotional outburst at a higher level than a hissy fit. Sometimes this is used as dying duck fit.", Category::emotions},
     {true, "Sweet as tea and sharp as vinegar", "Someone who is kind and pleasant but also has a sharp or keen mind", Category::intelligence},
     {true, "Don't go airing your dirty laundry in public", "Don't reveal private matters or personal issues in front of others", Category::advice},
-    {true, "Larapin' good", "Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'", Category::food},
+    {true, "Larrupin' good", "Describes food that is exceptionally delicious, tasty, or finger-lickin' good. Sometimes used and spelled as only larpin'", Category::food},
     {true, "Woolly booger", "A hairy, unkempt person, a monster/Sasquatch, or a fuzzy caterpillar", Category::general},
     {true, "Rurnt", "Really spoiled, broken, or beyond saving, whether it's food, a situation, or someone's manners", Category::expressions},
     {true, "Scat cat", "Said sometimes after someone sneezes. Some longer versions have \"get your tail out of the gravy\" or \"your tail's on fire\" added on.", Category::expressions},
