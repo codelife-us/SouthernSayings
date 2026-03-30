@@ -27,6 +27,7 @@
 //     version 1.6 - 2/10 - 2/11/2026 - new option and sayings added
 //     version 1.7 - 2/12/2026 - moved data into a separate header file and added more sayings
 //     version 1.8 - 3/4/2026 - added categories and category filtering
+//     version 2.0 - 3/30/2026 - added --version option
 
 #include <array>
 #include <string>
@@ -38,6 +39,8 @@
 #include "southernsayingsdata.h" // contains the array of sayings
 
 using namespace std;
+
+const string VERSION = "2.0";
 
 string categoryToString(Category cat) {
     switch (cat) {
@@ -114,8 +117,7 @@ void displayHelp() {
     cout << "  (none)                Display a single random saying (default)\n";
     cout << "  -a, --all             Display all sayings in shuffled order\n";
     cout << "  -1, --oneline         Display saying and meaning on one line with colon separator\n";
-    cout << "  -c, --color           Colored output (default): pink for saying, orange for meaning\n";
-    cout << "  -nc, --nocolor        Disable colored output\n";
+    cout << "  -nc, --nocolor        Disable colored output (default: colored)\n";
     cout << "  -nm, --nomeaning      Display only the saying without the meaning\n";
     cout << "  -sn, --shownumber     Display the unique saying number in brackets\n";
     cout << "  -p, --pick [number]   Display a specific saying by number\n";
@@ -127,6 +129,7 @@ void displayHelp() {
     cout << "  -j, --json            Output all sayings in JSON format\n";
     cout << "  --csv                 Output all sayings in CSV format\n";
     cout << "      --appinfo         Display links to the app version\n";
+    cout << "  -v, --version         Display the version number\n";
     cout << "  -h, --help            Display this help message\n";
 }
 
@@ -207,6 +210,9 @@ int main(int argc, char* argv[]) {
                 cerr << "Error: --pick requires a number.\n";
                 return 1;
             }
+        } else if (arg == "-v" || arg == "--version") {
+            cout << "Southern Sayings version " << VERSION << "\n";
+            return 0;
         } else if (arg == "-h" || arg == "--help") {
             displayHelp();
             return 0;
