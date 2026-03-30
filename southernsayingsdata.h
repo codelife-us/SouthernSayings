@@ -463,7 +463,9 @@ const std::vector<Saying> southernSayings = {
     {true, "The whole kit and caboodle", "All the parts or elements of something", Category::expressions },
     {true, "Enough to choke a horse", "An excessive amount", Category::expressions},
     {true, "Between you, me, and the fence post", "Hey, listen, but don't tell a soul about any of this", Category::expressions},
-    {true, "Sick as a dog", "Very ill", Category::expressions}
+    {true, "Sick as a dog", "Very ill", Category::expressions},
+    {true, "Appreciate you", "You will hear this said as a warmer, and more casual way of saying 'Thank you' or 'I appreciate what you did.' Pronunciation: ’PREESH-ee-ate yuh or ’PREESH-ate ya", Category::expressions},
+    {true, "Spoilt", "This means spoiled whether food that's not good any more, or a person who has been spoiled, or has bad manners. Pronunciation: ’SPULT'", Category::expressions}
 };
 
 
