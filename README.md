@@ -34,8 +34,7 @@ g++ southernsayings.cpp -o southernsayings
 - _(none)_ - Display one random saying
 - `-a, --all` - Display all sayings shuffled
 - `-1, --oneline` - Display saying and meaning on one line with colon separator
-- `-c, --color` - Colored output: pink for saying, orange for meaning (default)
-- `-nc, --nocolor` - Disable colored output
+- `-nc, --nocolor` - Disable colored output (color by default and pink for saying, orange for meaning)
 - `-nm, --nomeaning` - Display only the saying without the meaning
 - `     --polite` - Display only polite sayings
 - `     --showcategory` - Display the category before the saying
@@ -67,7 +66,7 @@ g++ southernsayings.cpp -o southernsayings
 
 ## Features
 
-- 437 Southern sayings with meanings
+- 439 Southern sayings with meanings
 - Random selection or display all sayings
 - Colored output by default (pink for sayings, orange for meanings), disable with `--nocolor`
 - Separate line formatting option for more compact format
