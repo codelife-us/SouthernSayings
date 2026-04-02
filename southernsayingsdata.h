@@ -465,7 +465,13 @@ const std::vector<Saying> southernSayings = {
     {true, "Between you, me, and the fence post", "Hey, listen, but don't tell a soul about any of this", Category::expressions},
     {true, "Sick as a dog", "Very ill", Category::expressions},
     {true, "Appreciate you", "You will hear this said as a warmer, and more casual way of saying 'Thank you' or 'I appreciate what you did.' Pronunciation: ’PREESH-ee-ate yuh or ’PREESH-ate ya", Category::expressions},
-    {true, "Spoilt", "This means spoiled whether food that's not good any more, or a person who has been spoiled, or has bad manners. Pronunciation: ’SPULT'", Category::expressions}
+    {true, "Spoilt", "This means spoiled whether food that's not good any more, or a person who has been spoiled, or has bad manners. Pronunciation: ’SPULT'", Category::expressions},
+    {true, "That really stuck in my crawl", "Something that irritates you", Category::expressions},
+    {true, "I'm worn slap out", "Extremely tired", Category::expressions},
+    {true, "Jiminy Christmas", "A more polite way to curse than taking the Lord's name in vain", Category::expressions},
+    {true, "Don't poke the bear", "Don't provoke someone who's easily angered", Category::expressions},
+    {true, "Stick-in-the-mud", "Someone who is unadventurous, old-fashioned, boring, or refuses to participate in new activities", Category::expressions},
+    {true, "Lollygag", "The verb means delay or put off. Lollygagging is someone wasting time and usually described as \"lollygagging around\"", Category::expressions}
 };
 
 
