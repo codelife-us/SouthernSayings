@@ -471,7 +471,12 @@ const std::vector<Saying> southernSayings = {
     {true, "Jiminy Christmas", "A more polite way to curse than taking the Lord's name in vain", Category::expressions},
     {true, "Don't poke the bear", "Don't provoke someone who's easily angered", Category::expressions},
     {true, "Stick-in-the-mud", "Someone who is unadventurous, old-fashioned, boring, or refuses to participate in new activities", Category::expressions},
-    {true, "Lollygag", "The verb means delay or put off. Lollygagging is someone wasting time and usually described as \"lollygagging around\"", Category::expressions}
+    {true, "Lollygag", "The verb means delay or put off. Lollygagging is someone wasting time and usually described as \"lollygagging around\"", Category::expressions},
+    {true, "Grinnin' like a possum eating a sweet potato", "Someone smiling ear to ear with pure contentment and satisfaction"},
+    {true, "She's country as cornbread", "Someone who is authentically, unapologetically Southern through and through"},
+    {true, "He's so slow he couldn't catch cold", "Someone who moves at an exasperatingly slow pace"},
+    {true, "Pitching a walleyed fit", "Throwing an absolute tantrum, even more dramatic than a hissy fit"},
+    {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction"}
 };
 
 
