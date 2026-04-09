@@ -66,7 +66,7 @@ g++ southernsayings.cpp -o southernsayings
 
 ## Features
 
-- 445 Southern sayings with meanings
+- 450 Southern sayings with meanings
 - Random selection or display all sayings
 - Colored output by default (pink for sayings, orange for meanings), disable with `--nocolor`
 - Separate line formatting option for more compact format
