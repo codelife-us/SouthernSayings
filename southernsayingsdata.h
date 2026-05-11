@@ -230,7 +230,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Gully washer", "An intense, heavy rainstorm that causes water to rush through ditches and gullies, often leading to temporary flooding", Category::weather},
     {true, "That'll put hair on your chest", "A phrase used to describe something particularly strong or intense, often about food or drink that has a bold, powerful effect", Category::food},
     {true, "Kiss my grits and call it gravy", "A sassy way of dismissing someone's opinion or response to something you've done or said, signaling that you don't care what they think or say", Category::emotions},
-    {true, "Butter my butt and call me a biscuit", "An expression of surprise or disbelief, similar to saying, “Well, I'll be!”", Category::surprise},
+    {true, "Butter my butt and call me a biscuit", "An expression of surprise or disbelief, similar to saying, \"Well, I'll be!\"", Category::surprise},
     {true, "Hog wild", "Thrilled or enthusiastic, often acting with unchecked excitement or energy", Category::emotions},
     {true, "Give it a whirl", "Encourages someone to try something, even if they're unsure how it will turn out", Category::advice},
     {true, "Hand to mouth", "Living with just enough to get by, often scraping together what's needed daily, with little to no extra for savings or luxuries", Category::money},
@@ -476,7 +476,7 @@ const std::vector<Saying> southernSayings = {
     {true, "She's country as cornbread", "Someone who is authentically, unapologetically Southern through and through", Category::personality},
     {true, "He's so slow he couldn't catch cold", "Someone who moves at an exasperatingly slow pace", Category::laziness},
     {true, "Pitching a walleyed fit", "Throwing an absolute tantrum, even more dramatic than a hissy fit", Category::emotions},
-    {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction", Category::expressions}
+    {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction", Category::expressions}    
 };
 
 
