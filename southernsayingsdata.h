@@ -225,7 +225,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Heavens to Betsy", "An exclamation of surprise or astonishment, often used when something unexpected happens", Category::surprise},
     {true, "She's as pretty as a peach", "This is a high compliment on appearance, meaning beautiful", Category::appearance},
     {true, "If mama ain't happy, ain't nobody happy", "The household's mood depends on the mother's happiness", Category::emotions},
-    {true, "Don't get your drawers in a wad", "A gentle reminder not to get too worked up over something minor. It's our way of saying, “Calm down; it's not worth the fuss.”", Category::advice},
+    {true, "Don't get your drawers in a wad", "A gentle reminder not to get too worked up over something minor. It's our way of saying, \"Calm down; it's not worth the fuss.\"", Category::advice},
     {true, "Well, slap my knee and call me silly", "An expression of surprise or astonishment, typically in response to unexpected news", Category::surprise},
     {true, "Gully washer", "An intense, heavy rainstorm that causes water to rush through ditches and gullies, often leading to temporary flooding", Category::weather},
     {true, "That'll put hair on your chest", "A phrase used to describe something particularly strong or intense, often about food or drink that has a bold, powerful effect", Category::food},
