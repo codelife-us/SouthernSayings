@@ -422,7 +422,7 @@ const std::vector<Saying> southernSayings = {
     {true, "He may not be a chicken, but he has his henhouse ways", "Timid and cautious", Category::personality},
     {true, "He's riding a gravy train with biscuit wheels", "Lucky and comfortable", Category::expressions},
     {true, "He don't care what you call him as long as you call him to supper", "He loves to eat", Category::food},
-    {true, "Good ole boy", "A term used to describe a man who is considered a traditional, down-to-earth Southerner. The term can be used affectionately as someone who embodies the Southern values and lifestyle, such as hospitality, loyalty, and a strong sense of community. But, it can be used in a more critical way to describe someone who is perceived as old-fashioned or resistant to change.", Category::expressions},
+    {true, "Good ole boy", "A traditional, down-to-earth Southern man — said with affection or as a knock", Category::expressions},
     {true, "Happy as a tick on a hound", "Extremely happy and content, often used to describe someone who is enjoying a situation or environment that suits them perfectly.", Category::emotions},
     {false, "She's got more curves than a country road", "Attractive and curvy figure as a compliment", Category::appearance},
     {true, "Scared as a cat at a dog pound", "Nervous, frightened, or anxious", Category::emotions},
