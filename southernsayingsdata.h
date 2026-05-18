@@ -156,7 +156,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Gimme some sugar", "What Grandma says when you pull in the driveway, pop out of the car, and come running. She's not looking for sweets; she wants a hug and a kiss.", Category::family},
     {true, "Well, I declare!", "A Southerner using this phrase could be declaring any number of things: surprise, dissent, happiness. The only requirement is to declare it loud and proud.", Category::surprise},
     {true, "Hush your mouth", "A Southerner might use this to tell someone to stop complaining or to be quiet. It's also used to tell someone to stop being a baby.", Category::expressions},
-    {true, "I'll tell you what", "An emphatic opener for a bargain, opinion, or piece of advice — sometimes nothing follows", Category::surprise},
+    {true, "I'll tell you what", "An emphatic opener for a bargain, opinion, or piece of advice - sometimes nothing follows", Category::surprise},
     {true, "I reckon", "This can mean -- I suppose, I think, or I imagine. It is a quintessential Southern phrase, said by friends and family on porches and in rocking chairs all across the South.", Category::expressions},
     {true, "It'll make ya wanna slap your mama", "Used to describe something that's so good that you might do something unthinkable or extreme as a result. It's often used to describe food that's insanely delicious.", Category::food},
     {true, "A rooster one day and a feather duster the next", "This is a Southerner's creative way of saying that you shouldn't crow like a rooster about your wealth and belonging today, because it could all disappear tomorrow.", Category::advice},
