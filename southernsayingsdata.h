@@ -156,12 +156,12 @@ const std::vector<Saying> southernSayings = {
     {true, "Gimme some sugar", "What Grandma says when you pull in the driveway, pop out of the car, and come running. She's not looking for sweets; she wants a hug and a kiss.", Category::family},
     {true, "Well, I declare!", "A Southerner using this phrase could be declaring any number of things: surprise, dissent, happiness. The only requirement is to declare it loud and proud.", Category::surprise},
     {true, "Hush your mouth", "A Southerner might use this to tell someone to stop complaining or to be quiet. It's also used to tell someone to stop being a baby.", Category::expressions},
-    {true, "I'll tell you what", "This is a point of emphasis and exclamation that often ends without any additional telling at all. It can also be the opening to striking a bargain, sharing a strongly held opinion, or offering a piece of advice you may or may not want to hear.", Category::surprise},
+    {true, "I'll tell you what", "An emphatic opener for a bargain, opinion, or piece of advice — sometimes nothing follows", Category::surprise},
     {true, "I reckon", "This can mean -- I suppose, I think, or I imagine. It is a quintessential Southern phrase, said by friends and family on porches and in rocking chairs all across the South.", Category::expressions},
     {true, "It'll make ya wanna slap your mama", "Used to describe something that's so good that you might do something unthinkable or extreme as a result. It's often used to describe food that's insanely delicious.", Category::food},
     {true, "A rooster one day and a feather duster the next", "This is a Southerner's creative way of saying that you shouldn't crow like a rooster about your wealth and belonging today, because it could all disappear tomorrow.", Category::advice},
     {true, "He ain't got the sense God gave a goose", "This is another nice way to say that someone is lacking in brain power.", Category::intelligence},
-    {true, "Pretty is as pretty does", "Similar to the phrase \"quit being ugly,\" this one alludes to what's on the inside, not the outside, that matters. The expression is a simple reminder, often given to children, to remind them to be kind to others and mind their manners.", Category::advice},
+    {true, "Pretty is as pretty does", "A reminder that kindness and manners matter more than looks; often told to kids.", Category::advice},
     {true, "Can't never could", "This is positive thinking, Southern style.", Category::advice},
     {true, "Preachin' to the choir", "something to quit doing when trying to convince someone who already agrees with you", Category::expressions},
     {true, "It'll all come out in the wash", "Like dirt and stains, worries and problems will wash away. Whatever is bothering you isn't serious, and it will eventually be resolved with no lasting effects and that means don't worry.", Category::advice},
@@ -237,7 +237,7 @@ const std::vector<Saying> southernSayings = {
     {true, "Don't let the door hit ya where the good Lord split ya", "Please get out now as I don't care if the door hits you on the way out", Category::expressions},
     {true, "Like two peas in a pod", "These two people are inseparable and depend on each other for support and companionship.", Category::personality},
     {true, "Like water off a duck's back", "Hearing this phrase is a suggestion that you should let go of whatever ails you so it doesn't keep you soaked in anger or frustration for too long.", Category::advice},
-    {true, "Christmas Eve gift!", "This is usually said on the morning of Dec. 24, with the goal of being the first person to say it. In some families, saying it can even result in receiving an extra gift, and may be a hug.", Category::family},
+    {true, "Christmas Eve gift!", "This is usually said on the morning of Dec 24, with the goal of being the first person to say it. In some families, saying it can even result in receiving an extra gift, and may be a hug.", Category::family},
     {true, "He's got ants in his pants", "Restless or unable to sit still", Category::emotions},
     {true, "Sweet tea makes everything better", "Or it is a serious problem", Category::expressions},
     {true, "He's as cool as a cucumber", "Very calm and composed", Category::emotions},
@@ -459,7 +459,7 @@ const std::vector<Saying> southernSayings = {
     {true, "We go together like country ham and red-eye gravy", "Close relationship or bond", Category::relationships},
     {true, "As sure as the vine twines around the stump, you're my darling sugar lump", "Sweet phrase of affection", Category::relationships},
     {true, "Aight", "All right", Category::expressions },
-    {true, "Get back to my rat killin'", "This is about getting back to work or attending to one's business. It is sometimes said as a polite way to end a conversation with a long winded person and typically by saying, \"Well, I'll let you get back to your rat killin'\"", Category::expressions },
+    {true, "Get back to my rat killin'", "Getting back to one's business — or a polite cue to end a long-winded chat: \"I'll let you get back to your rat killin'\"", Category::expressions },
     {true, "The whole kit and caboodle", "All the parts or elements of something", Category::expressions },
     {true, "Enough to choke a horse", "An excessive amount", Category::expressions},
     {true, "Between you, me, and the fence post", "Hey, listen, but don't tell a soul about any of this", Category::expressions},
@@ -478,7 +478,3 @@ const std::vector<Saying> southernSayings = {
     {true, "Pitching a walleyed fit", "Throwing an absolute tantrum, even more dramatic than a hissy fit", Category::emotions},
     {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction", Category::expressions}    
 };
-
-
-
-
