@@ -476,5 +476,7 @@ const std::vector<Saying> southernSayings = {
     {true, "She's country as cornbread", "Someone who is authentically, unapologetically Southern through and through", Category::personality},
     {true, "He's so slow he couldn't catch cold", "Someone who moves at an exasperatingly slow pace", Category::laziness},
     {true, "Pitching a walleyed fit", "Throwing an absolute tantrum, even more dramatic than a hissy fit", Category::emotions},
-    {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction", Category::expressions}    
+    {false, "That went over like a fart in church", "Something that was very poorly received or caused an awkward reaction", Category::expressions},
+    {true, "Jerk a knot in your tail", "Warning to someone about impending punishment for misbehaving, and may be playful or serious", Category::expressions},
+    {true, "Ring-tailed tooter", "Someone who is exceptionally wild, spirited, or impressive — a real character with an outsized personality", Category::personality}
 };
